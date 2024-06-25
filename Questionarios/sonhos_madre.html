@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style_quest.css">
+    <script src="../JS/JS_quest.js"></script>
+
+    <title>Questionário de Sonhos (MADRE)</title>
+</head>
+<body>
+    <h2 class="Titulo_user" id="titulo_QSM">Questionário de Sonhos (MADRE)</h2>
+    
+    <p class="descricao">
+        Este questionário visa obter uma boa visão geral dos diferentes aspectos do sonho. Demora cerca de 5 a 10 minutos para ser concluído. Por favor, não tenha pressa e responda a todas as perguntas de forma cuidadosa e completa.
+    </p>
+
+    <form action="#">
+        <!-- Pergunta 1 -->
+        <fieldset>
+            <legend id="QSM_pergunta1">1. Com que frequência você se lembrou dos seus sonhos recentemente (nos últimos meses)?</legend>
+
+            <input type="radio" id="qsm_pergunta1_opcao1" name="qsm_pergunta1" value="Quase todas as manhãs">
+            <label for="qsm_pergunta1_opcao1">Quase todas as manhãs</label><br>
+
+            <input type="radio" id="qsm_pergunta1_opcao2" name="qsm_pergunta1" value="Várias vezes por semana">
+            <label for="qsm_pergunta1_opcao2">Várias vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta1_opcao3" name="qsm_pergunta1" value="Cerca de uma vez por semana">
+            <label for="qsm_pergunta1_opcao3">Cerca de uma vez por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta1_opcao4" name="qsm_pergunta1" value="Duas ou três vezes por mês">
+            <label for="qsm_pergunta1_opcao4">Duas ou três vezes por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta1_opcao5" name="qsm_pergunta1" value="Cerca de uma vez por mês">
+            <label for="qsm_pergunta1_opcao5">Cerca de uma vez por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta1_opcao6" name="qsm_pergunta1" value="Menos de uma vez por mês">
+            <label for="qsm_pergunta1_opcao6">Menos de uma vez por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta1_opcao7" name="qsm_pergunta1" value="Nunca">
+            <label for="qsm_pergunta1_opcao7">Nunca</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta1')">x</button>
+        </fieldset>
+
+
+        <!-- Pergunta 2 -->
+        <fieldset>
+            <legend id="QSM_pergunta2">2. Quão intensos são seus sonhos emocionalmente?</legend>
+
+            <input type="radio" id="qsm_pergunta2_opcao1" name="qsm_pergunta2" value="Nada intenso">
+            <label for="qsm_pergunta2_opcao1">Nada intenso</label><br>
+
+            <input type="radio" id="qsm_pergunta2_opcao2" name="qsm_pergunta2" value="Não tão intenso">
+            <label for="qsm_pergunta2_opcao2">Não tão intenso</label><br>
+
+            <input type="radio" id="qsm_pergunta2_opcao3" name="qsm_pergunta2" value="Um tanto intenso">
+            <label for="qsm_pergunta2_opcao3">Um tanto intenso</label><br>
+
+            <input type="radio" id="qsm_pergunta2_opcao4" name="qsm_pergunta2" value="Bastante intenso">
+            <label for="qsm_pergunta2_opcao4">Bastante intenso</label><br>
+
+            <input type="radio" id="qsm_pergunta2_opcao5" name="qsm_pergunta2" value="Muito">
+            <label for="qsm_pergunta2_opcao5">Muito</label><br>
+
+            <input type="radio" id="qsm_pergunta2_opcao6" name="qsm_pergunta2" value="Intenso">
+            <label for="qsm_pergunta2_opcao6">Intenso</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta2')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 3 -->
+        <fieldset>
+            <legend id="QSM_pergunta3">3. Qual é o tom emocional dos seus sonhos em média?</legend>
+
+            <input type="radio" id="qsm_pergunta3_opcao1" name="qsm_pergunta3" value="Muito negativo">
+            <label for="qsm_pergunta3_opcao1">Muito negativo</label><br>
+
+            <input type="radio" id="qsm_pergunta3_opcao2" name="qsm_pergunta3" value="Um tanto negativo">
+            <label for="qsm_pergunta3_opcao2">Um tanto negativo</label><br>
+
+            <input type="radio" id="qsm_pergunta3_opcao3" name="qsm_pergunta3" value="Neutro">
+            <label for="qsm_pergunta3_opcao3">Neutro</label><br>
+
+            <input type="radio" id="qsm_pergunta3_opcao4" name="qsm_pergunta3" value="Um pouco positivo">
+            <label for="qsm_pergunta3_opcao4">Um pouco positivo</label><br>
+
+            <input type="radio" id="qsm_pergunta3_opcao5" name="qsm_pergunta3" value="Muito positivo">
+            <label for="qsm_pergunta3_opcao5">Muito positivo</label><br>
+            
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta3')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 4 -->
+        <fieldset>
+            <legend id="QSM_pergunta4">4. Com que frequência você teve pesadelos recentemente (nos últimos meses)?</legend>
+
+            <p>
+                Definição: Pesadelos são sonhos com fortes emoções negativas que resultam em despertando dos sonhos. A trama do sonho pode ser lembrada de forma muito vívida ao acordar. 
+            </p>
+
+            <input type="radio" id="qsm_pergunta4_opcao1" name="qsm_pergunta4" value="Várias vezes por semana">
+            <label for="qsm_pergunta4_opcao1">Várias vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta4_opcao2" name="qsm_pergunta4" value="Cerca de uma vez por semana">
+            <label for="qsm_pergunta4_opcao2">Cerca de uma vez por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta4_opcao3" name="qsm_pergunta4" value="Duas a três vezes por mês">
+            <label for="qsm_pergunta4_opcao3">Duas a três vezes por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta4_opcao4" name="qsm_pergunta4" value="Cerca de uma vez por mês">
+            <label for="qsm_pergunta4_opcao4">Cerca de uma vez por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta4_opcao5" name="qsm_pergunta4" value="Cerca de duas a quatro vezes por ano">
+            <label for="qsm_pergunta4_opcao5">Cerca de duas a quatro vezes por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta4_opcao6" name="qsm_pergunta4" value="Cerca de uma vez por ano">
+            <label for="qsm_pergunta4_opcao6">Cerca de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta4_opcao7" name="qsm_pergunta4" value="Menos de uma vez por ano">
+            <label for="qsm_pergunta4_opcao7">Menos de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta4_opcao8" name="qsm_pergunta4" value="Nunca">
+            <label for="qsm_pergunta4_opcao8">Nunca</label><br>
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta4')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 5 -->
+        <fieldset>
+            <legend id="QSM_pergunta5">5. Se você atualmente tem pesadelos, quão angustiantes eles são para você?</legend>
+
+            <input type="radio" id="qsm_pergunta5_opcao1" name="qsm_pergunta5" value="Nem um pouco angustiante">
+            <label for="qsm_pergunta5_opcao1">Nem um pouco angustiante</label><br>
+
+            <input type="radio" id="qsm_pergunta5_opcao2" name="qsm_pergunta5" value="Não é tão angustiante">
+            <label for="qsm_pergunta5_opcao2">Não é tão angustiante</label><br>
+
+            <input type="radio" id="qsm_pergunta5_opcao3" name="qsm_pergunta5" value="Um tanto angustiante">
+            <label for="qsm_pergunta5_opcao3">Um tanto angustiante</label><br>
+
+            <input type="radio" id="qsm_pergunta5_opcao4" name="qsm_pergunta5" value="Bastante angustiante">
+            <label for="qsm_pergunta5_opcao4">Bastante angustiante</label><br>
+
+            <input type="radio" id="qsm_pergunta5_opcao5" name="qsm_pergunta5" value="Muito angustiante">
+            <label for="qsm_pergunta5_opcao5">Muito angustiante</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta5')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 6 -->
+        <fieldset>
+            <legend id="QSM_pergunta6">6. Você tem pesadelos recorrentes relacionados a uma situação que você vivenciou quando estava acordado?</legend>
+
+            <input type="radio" id="qsm_pergunta6_opcao1" name="qsm_pergunta6" value="Sim">
+            <label for="qsm_pergunta6_opcao1">Sim</label>
+
+            <input type="radio" id="qsm_pergunta6_opcao2" name="qsm_pergunta6" value="Não">
+            <label for="qsm_pergunta6_opcao2">Não</label>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta6')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 7 -->
+        <fieldset>
+            <legend id="QSM_pergunta7">7. Quantos dos seus pesadelos são recorrentes (em porcentagem)?</legend>
+
+            <input type="number" id="qsm_pergunta7_num" name="qsm_pergunta7" onblur="num_pergunta7(this)">
+            <label for="qsm_pergunta7_num">%</label>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta7')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 8 -->
+        <fieldset>
+            <legend id="QSM_pergunta8">8. Com que frequência você teve pesadelos durante a sua infância (dos 6 aos 12 anos)?</legend>
+
+            <input type="radio" id="qsm_pergunta8_opcao1" name="qsm_pergunta8" value="Várias vezes por semana">
+            <label for="qsm_pergunta8_opcao1">Várias vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta8_opcao2" name="qsm_pergunta8" value="Cerca de uma vez por semana">
+            <label for="qsm_pergunta8_opcao2">Cerca de duas a quatro vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta8_opcao3" name="qsm_pergunta8" value="Duas a três vezes por mês">
+            <label for="qsm_pergunta8_opcao3">Duas a três vezes por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta8_opcao4" name="qsm_pergunta8" value="Cerca de uma vez por mês">
+            <label for="qsm_pergunta8_opcao4">Cerca de uma vez por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta8_opcao5" name="qsm_pergunta8" value="Cerca de duas a quatro vezes por ano">
+            <label for="qsm_pergunta8_opcao5">Cerca de duas a quatro vezes por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta8_opcao6" name="qsm_pergunta8" value="Cerca de uma vez por ano">
+            <label for="qsm_pergunta8_opcao6">Cerca de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta8_opcao7" name="qsm_pergunta8" value="Menos de uma vez por ano">
+            <label for="qsm_pergunta8_opcao7">Menos de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta8_opcao8" name="qsm_pergunta8" value="Nunca">
+            <label for="qsm_pergunta8_opcao8">Nunca</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta8')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 9 -->
+        <fieldset>
+            <legend id="QSM_pergunta9">9. Liste os tópicos dos seus pesadelos de infância:</legend>
+
+            <label for="qsm_pergunta9_text"></label>
+            <textarea id="qsm_pergunta9_text" name="esp_pergunta9" placeholder="Tópicos:"></textarea>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta9')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 10 -->
+        <fieldset>
+            <legend id="QSM_pergunta10">10. Com que frequência você tem os chamados sonhos lúcidos (ver definição)?</legend>
+
+            <p>
+                Definição: Em um sonho lúcido, a pessoa tem consciência de que está sonhando durante o sonho. Assim, é possível acordar deliberadamente, ou influenciar ativamente a ação do sonho, ou observar passivamente o curso do sonho.
+            </p>
+
+            <input type="radio" id="qsm_pergunta10_opcao1" name="qsm_pergunta10" value="Várias vezes por semana">
+            <label for="qsm_pergunta10_opcao1">Várias vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta10_opcao2" name="qsm_pergunta10" value="Cerca de uma vez por semana">
+            <label for="qsm_pergunta10_opcao2">Cerca de duas a quatro vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta10_opcao3" name="qsm_pergunta10" value="Duas a três vezes por mês">
+            <label for="qsm_pergunta10_opcao3">Duas a três vezes por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta10_opcao4" name="qsm_pergunta10" value="Cerca de uma vez por mês">
+            <label for="qsm_pergunta10_opcao4">Cerca de uma vez por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta10_opcao5" name="qsm_pergunta10" value="Cerca de duas a quatro vezes por ano">
+            <label for="qsm_pergunta10_opcao5">Cerca de duas a quatro vezes por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta10_opcao6" name="qsm_pergunta10" value="Cerca de uma vez por ano">
+            <label for="qsm_pergunta10_opcao6">Cerca de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta10_opcao7" name="qsm_pergunta10" value="Menos de uma vez por ano">
+            <label for="qsm_pergunta10_opcao7">Menos de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta10_opcao8" name="qsm_pergunta10" value="Nunca">
+            <label for="qsm_pergunta10_opcao8">Nunca</label><br>
+
+            
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta10')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 11 -->
+        <fieldset>
+            <legend id="QSM_pergunta11">11. Se você teve sonhos lúcidos, quantos anos você tinha quando eles ocorreram pela primeira vez?</legend>
+
+            <input type="number" id="qsm_pergunta11_num" name="qsm_pergunta11" placeholder="idade" onblur="num_pergunta11(this)">
+            <label for="qsm_pergunta11_num">anos</label>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta11')">x</button>
+        </fieldset>
+
+        <fieldset>
+            <legend id="QSM_pergunta12">12. Responda apenas as perguntas com apenas um tópico:</legend>
+
+            <!-- Pergunta 12 a -->
+            <fieldset>
+                <legend id="QSM_pergunta12_a">a. Atitude em relação aos sonhos</legend>
+
+                <input type="radio" id="qsm_pergunta12_opcao1_a" name="qsm_pergunta12_a" value="De jeito nenhum">
+                <label for="qsm_pergunta12_opcao1_a">De jeito nenhum</label><br>
+
+                <input type="radio" id="qsm_pergunta12_opcao2_a" name="qsm_pergunta12_a" value="Nem tanto">
+                <label for="qsm_pergunta12_opcao2_a">Nem tanto</label><br>
+
+                <input type="radio" id="qsm_pergunta12_opcao3_a" name="qsm_pergunta12_a" value="Parcialmente">
+                <label for="qsm_pergunta12_opcao3_a">Parcialmente</label><br>
+
+                <input type="radio" id="qsm_pergunta12_opcao4_a" name="qsm_pergunta12_a" value="Um pouco">
+                <label for="qsm_pergunta12_opcao4_a">Um pouco</label><br>
+
+                <input type="radio" id="qsm_pergunta12_opcao5_a" name="qsm_pergunta12_a" value="Totalmente">
+                <label for="qsm_pergunta12_opcao5_a">Totalmente</label><br>
+
+
+                <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta12_a')">x</button>
+            </fieldset>
+
+            <!-- Pergunta 12 b -->
+            <fieldset>
+                <legend id="QSM_pergunta12_b">b. Quanto significado você atribui aos seus sonhos?</legend>
+
+                <input type="radio" id="qsm_pergunta12_opcao1_b" name="qsm_pergunta12_b" value="Sim">
+                <label for="qsm_pergunta12_opcao1_b">Sim</label>
+
+                <input type="radio" id="qsm_pergunta12_opcao2_b" name="qsm_pergunta12_b" value="Não">
+                <label for="qsm_pergunta12_opcao2_b">Não</label>
+
+
+                <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta12_b')">x</button>
+            </fieldset>
+
+            <!-- Pergunta 12 c -->
+            <fieldset>
+                <legend id="QSM_pergunta12_c">c. Quão forte é o seu interesse pelos sonhos?</legend>
+
+                <input type="radio" id="qsm_pergunta12_opcao1_c" name="qsm_pergunta12_c" value="Nenhum">
+                <label for="qsm_pergunta12_opcao1_c">Nenhum</label><br>
+
+                <input type="radio" id="qsm_pergunta12_opcao2_c" name="qsm_pergunta12_c" value="Não muito">
+                <label for="qsm_pergunta12_opcao2_c">Não muito</label><br>
+
+                <input type="radio" id="qsm_pergunta12_opcao3_c" name="qsm_pergunta12_c" value="Tanto faz">
+                <label for="qsm_pergunta12_opcao3_c">Tanto faz</label><br>
+
+                <input type="radio" id="qsm_pergunta12_opcao4_c" name="qsm_pergunta12_c" value="Um pouco">
+                <label for="qsm_pergunta12_opcao4_c">Um pouco</label><br>
+
+                <input type="radio" id="qsm_pergunta12_opcao5_c" name="qsm_pergunta12_c" value="Muito forte">
+                <label for="qsm_pergunta12_opcao5_c">Muito forte</label><br>
+
+
+                <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta12_c')">x</button>
+            </fieldset>
+
+            <!-- Pergunta 12 d -->
+            <fieldset>
+                <legend id="QSM_pergunta12_d">d. Eu acho que os sonhos são significativos.</legend>
+
+                <input type="radio" id="qsm_pergunta12_opcao1_d" name="qsm_pergunta12_d" value="Sim">
+                <label for="qsm_pergunta12_opcao1_d">Sim</label>
+
+                <input type="radio" id="qsm_pergunta12_opcao2_d" name="qsm_pergunta12_d" value="Não">
+                <label for="qsm_pergunta12_opcao2_d">Não</label>
+
+
+                <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta12_d')">x</button>
+            </fieldset>
+            
+            <!-- Pergunta 12 e -->
+            <fieldset>
+                <legend id="QSM_pergunta12_e">e. Quero saber mais sobre sonhos.</legend>
+
+                <input type="radio" id="qsm_pergunta12_opcao1_e" name="qsm_pergunta12_e" value="Sim">
+                <label for="qsm_pergunta12_opcao1_e">Sim</label>
+
+                <input type="radio" id="qsm_pergunta12_opcao2_e" name="qsm_pergunta12_e" value="Não">
+                <label for="qsm_pergunta12_opcao2_e">Não</label>
+
+
+                <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta12_e')">x</button>
+            </fieldset>
+
+            <!-- Pergunta 12 f -->
+            <fieldset>
+                <legend id="QSM_pergunta12_f">f. Se alguém consegue recordar e interpretar seus sonhos, sua vida será enriquecida.</legend>
+
+                <input type="radio" id="qsm_pergunta12_opcao1_f" name="qsm_pergunta12_f" value="Sim">
+                <label for="qsm_pergunta12_opcao1_f">Sim</label>
+
+                <input type="radio" id="qsm_pergunta12_opcao2_f" name="qsm_pergunta12_f" value="Não">
+                <label for="qsm_pergunta12_opcao2_f">Não</label>
+
+
+                <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta12_f')">x</button>
+            </fieldset>
+
+            <!-- Pergunta 12 g -->
+            <fieldset>
+                <legend id="QSM_pergunta12_g">g. Acho que sonhar é em geral uma atividade muito interessante.</legend>
+
+                <input type="radio" id="qsm_pergunta12_opcao1_g" name="qsm_pergunta12_g" value="Sim">
+                <label for="qsm_pergunta12_opcao1_g">Sim</label>
+
+                <input type="radio" id="qsm_pergunta12_opcao2_g" name="qsm_pergunta12_g" value="Não">
+                <label for="qsm_pergunta12_opcao2_g">Não</label>
+
+
+                <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta12_g')">x</button>
+            </fieldset>
+
+            <!-- Pergunta 12 h -->
+            <fieldset>
+                <legend id="QSM_pergunta12_h">h. Uma pessoa que reflete sobre seus sonhos certamente é capaz de aprender mais sobre ela mesma.</legend>
+
+                <input type="radio" id="qsm_pergunta12_opcao1_h" name="qsm_pergunta12_h" value="Sim">
+                <label for="qsm_pergunta12_opcao1_h">Sim</label>
+
+                <input type="radio" id="qsm_pergunta12_opcao2_h" name="qsm_pergunta12_h" value="Não">
+                <label for="qsm_pergunta12_opcao2_h">Não</label>
+
+
+                <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta12_h')">x</button>
+            </fieldset>
+
+            <!-- Pergunta 12 i -->
+            <fieldset>
+                <legend id="QSM_pergunta12_i">i. Você tem a impressão de que os sonhos fornecem impulsos ou dicas para sua vida desperta?</legend>
+
+                <input type="radio" id="qsm_pergunta12_opcao1_i" name="qsm_pergunta12_i" value="Sim">
+                <label for="qsm_pergunta12_opcao1_i">Sim</label>
+
+                <input type="radio" id="qsm_pergunta12_opcao2_i" name="qsm_pergunta12_i" value="Não">
+                <label for="qsm_pergunta12_opcao2_i">Não</label>
+
+
+                <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta12_i')">x</button>
+            </fieldset>
+        </fieldset>
+
+        <!-- Pergunta 13 -->
+        <fieldset>
+            <legend id="QSM_pergunta13">13. Com que frequência você conta seus sonhos para outras pessoas?</legend>
+
+            <input type="radio" id="qsm_pergunta13_opcao1" name="qsm_pergunta13" value="Várias vezes por semana">
+            <label for="qsm_pergunta13_opcao1">Várias vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta13_opcao2" name="qsm_pergunta13" value="Cerca de uma vez por semana">
+            <label for="qsm_pergunta13_opcao2">Cerca de duas a quatro vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta13_opcao3" name="qsm_pergunta13" value="Duas a três vezes por mês">
+            <label for="qsm_pergunta13_opcao3">Duas a três vezes por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta13_opcao4" name="qsm_pergunta13" value="Cerca de uma vez por mês">
+            <label for="qsm_pergunta13_opcao4">Cerca de uma vez por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta13_opcao5" name="qsm_pergunta13" value="Cerca de duas a quatro vezes por ano">
+            <label for="qsm_pergunta13_opcao5">Cerca de duas a quatro vezes por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta13_opcao6" name="qsm_pergunta13" value="Cerca de uma vez por ano">
+            <label for="qsm_pergunta13_opcao6">Cerca de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta13_opcao7" name="qsm_pergunta13" value="Menos de uma vez por ano">
+            <label for="qsm_pergunta13_opcao7">Menos de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta13_opcao8" name="qsm_pergunta13" value="Nunca">
+            <label for="qsm_pergunta13_opcao8">Nunca</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta13')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 14 -->
+        <fieldset>
+            <legend id="QSM_pergunta14">14. Com que frequência você registra seus sonhos?</legend>
+
+            <input type="radio" id="qsm_pergunta14_opcao1" name="qsm_pergunta14" value="Várias vezes por semana">
+            <label for="qsm_pergunta14_opcao1">Várias vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta14_opcao2" name="qsm_pergunta14" value="Cerca de uma vez por semana">
+            <label for="qsm_pergunta14_opcao2">Cerca de duas a quatro vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta14_opcao3" name="qsm_pergunta14" value="Duas a três vezes por mês">
+            <label for="qsm_pergunta14_opcao3">Duas a três vezes por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta14_opcao4" name="qsm_pergunta14" value="Cerca de uma vez por mês">
+            <label for="qsm_pergunta14_opcao4">Cerca de uma vez por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta14_opcao5" name="qsm_pergunta14" value="Cerca de duas a quatro vezes por ano">
+            <label for="qsm_pergunta14_opcao5">Cerca de duas a quatro vezes por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta14_opcao6" name="qsm_pergunta14" value="Cerca de uma vez por ano">
+            <label for="qsm_pergunta14_opcao6">Cerca de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta14_opcao7" name="qsm_pergunta14" value="Menos de uma vez por ano">
+            <label for="qsm_pergunta14_opcao7">Menos de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta14_opcao8" name="qsm_pergunta14" value="Nunca">
+            <label for="qsm_pergunta14_opcao8">Nunca</label><br>
+
+            
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta14')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 15 -->
+        <fieldset>
+            <legend id="QSM_pergunta15">15. Com que frequência seus sonhos afetam seu humor durante o dia?</legend>
+
+            <input type="radio" id="qsm_pergunta15_opcao1" name="qsm_pergunta15" value="Várias vezes por semana">
+            <label for="qsm_pergunta15_opcao1">Várias vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta15_opcao2" name="qsm_pergunta15" value="Cerca de uma vez por semana">
+            <label for="qsm_pergunta15_opcao2">Cerca de duas a quatro vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta15_opcao3" name="qsm_pergunta15" value="Duas a três vezes por mês">
+            <label for="qsm_pergunta15_opcao3">Duas a três vezes por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta15_opcao4" name="qsm_pergunta15" value="Cerca de uma vez por mês">
+            <label for="qsm_pergunta15_opcao4">Cerca de uma vez por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta15_opcao5" name="qsm_pergunta15" value="Cerca de duas a quatro vezes por ano">
+            <label for="qsm_pergunta15_opcao5">Cerca de duas a quatro vezes por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta15_opcao6" name="qsm_pergunta15" value="Cerca de uma vez por ano">
+            <label for="qsm_pergunta15_opcao6">Cerca de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta15_opcao7" name="qsm_pergunta15" value="Menos de uma vez por ano">
+            <label for="qsm_pergunta15_opcao7">Menos de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta15_opcao8" name="qsm_pergunta15" value="Nunca">
+            <label for="qsm_pergunta15_opcao8">Nunca</label><br>
+
+            
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta15')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 16 -->
+        <fieldset>
+            <legend id="QSM_pergunta16">16. Com que frequência seus sonhos lhe dão ideias criativas?</legend>
+
+            <input type="radio" id="qsm_pergunta16_opcao1" name="qsm_pergunta16" value="Várias vezes por semana">
+            <label for="qsm_pergunta16_opcao1">Várias vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta16_opcao2" name="qsm_pergunta16" value="Cerca de uma vez por semana">
+            <label for="qsm_pergunta16_opcao2">Cerca de duas a quatro vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta16_opcao3" name="qsm_pergunta16" value="Duas a três vezes por mês">
+            <label for="qsm_pergunta16_opcao3">Duas a três vezes por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta16_opcao4" name="qsm_pergunta16" value="Cerca de uma vez por mês">
+            <label for="qsm_pergunta16_opcao4">Cerca de uma vez por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta16_opcao5" name="qsm_pergunta16" value="Cerca de duas a quatro vezes por ano">
+            <label for="qsm_pergunta16_opcao5">Cerca de duas a quatro vezes por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta16_opcao6" name="qsm_pergunta16" value="Cerca de uma vez por ano">
+            <label for="qsm_pergunta16_opcao6">Cerca de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta16_opcao7" name="qsm_pergunta16" value="Menos de uma vez por ano">
+            <label for="qsm_pergunta16_opcao7">Menos de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta16_opcao8" name="qsm_pergunta16" value="Nunca">
+            <label for="qsm_pergunta16_opcao8">Nunca</label><br>
+
+            
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta16')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 18 -->
+        <fieldset>
+            <legend id="QSM_pergunta18">18. Com que frequência os seus sonhos o ajudam a identificar e resolver os seus problemas?</legend>
+
+            <input type="radio" id="qsm_pergunta18_opcao1" name="qsm_pergunta18" value="Várias vezes por semana">
+            <label for="qsm_pergunta18_opcao1">Várias vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta18_opcao2" name="qsm_pergunta18" value="Cerca de uma vez por semana">
+            <label for="qsm_pergunta18_opcao2">Cerca de duas a quatro vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta18_opcao3" name="qsm_pergunta18" value="Duas a três vezes por mês">
+            <label for="qsm_pergunta18_opcao3">Duas a três vezes por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta18_opcao4" name="qsm_pergunta18" value="Cerca de uma vez por mês">
+            <label for="qsm_pergunta18_opcao4">Cerca de uma vez por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta18_opcao5" name="qsm_pergunta18" value="Cerca de duas a quatro vezes por ano">
+            <label for="qsm_pergunta18_opcao5">Cerca de duas a quatro vezes por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta18_opcao6" name="qsm_pergunta18" value="Cerca de uma vez por ano">
+            <label for="qsm_pergunta18_opcao6">Cerca de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta18_opcao7" name="qsm_pergunta18" value="Menos de uma vez por ano">
+            <label for="qsm_pergunta18_opcao7">Menos de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta18_opcao8" name="qsm_pergunta18" value="Nunca">
+            <label for="qsm_pergunta18_opcao8">Nunca</label><br>
+
+            
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta18')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 19 -->
+        <fieldset>
+            <legend id="QSM_pergunta19">19. Com que frequência você experimenta Déjà vus (ver definição)?</legend>
+
+            <p>
+                Definição: Durante uma experiência de déjà vu, a pessoa está convencida de que está revivendo uma situação da vida real que já foi vivenciada em um sonho.
+            </p>
+
+            <input type="radio" id="qsm_pergunta19_opcao1" name="qsm_pergunta19" value="Várias vezes por semana">
+            <label for="qsm_pergunta19_opcao1">Várias vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta19_opcao2" name="qsm_pergunta19" value="Cerca de uma vez por semana">
+            <label for="qsm_pergunta19_opcao2">Cerca de duas a quatro vezes por semana</label><br>
+
+            <input type="radio" id="qsm_pergunta19_opcao3" name="qsm_pergunta19" value="Duas a três vezes por mês">
+            <label for="qsm_pergunta19_opcao3">Duas a três vezes por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta19_opcao4" name="qsm_pergunta19" value="Cerca de uma vez por mês">
+            <label for="qsm_pergunta19_opcao4">Cerca de uma vez por mês</label><br>
+
+            <input type="radio" id="qsm_pergunta19_opcao5" name="qsm_pergunta19" value="Cerca de duas a quatro vezes por ano">
+            <label for="qsm_pergunta19_opcao5">Cerca de duas a quatro vezes por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta19_opcao6" name="qsm_pergunta19" value="Cerca de uma vez por ano">
+            <label for="qsm_pergunta19_opcao6">Cerca de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta19_opcao7" name="qsm_pergunta19" value="Menos de uma vez por ano">
+            <label for="qsm_pergunta19_opcao7">Menos de uma vez por ano</label><br>
+
+            <input type="radio" id="qsm_pergunta19_opcao8" name="qsm_pergunta19" value="Nunca">
+            <label for="qsm_pergunta19_opcao8">Nunca</label><br>
+
+            
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta19')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 20 -->
+        <fieldset>
+            <legend id="QSM_pergunta20">20. Você já leu algo sobre sonhos? (Livros ou artigos de revistas)?</legend>
+
+            <input type="radio" id="qsm_pergunta20_opcao1" name="qsm_pergunta20" value="Não">
+            <label for="qsm_pergunta20_opcao1">Não</label><br>
+
+            <input type="radio" id="qsm_pergunta20_opcao2" name="qsm_pergunta20" value="Uma a duas vezes">
+            <label for="qsm_pergunta20_opcao2">Uma a duas vezes</label><br>
+
+            <input type="radio" id="qsm_pergunta20_opcao3" name="qsm_pergunta20" value="Várias vezes">
+            <label for="qsm_pergunta20_opcao3">Várias vezes</label><br>
+
+            
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta20')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 21 -->
+        <fieldset>
+            <legend id="QSM_pergunta21">21. A literatura sobre sonhos/interpretação de sonhos ajudou você a compreender melhor seus sonhos?</legend>
+
+            <input type="radio" id="qsm_pergunta21_opcao1" name="qsm_pergunta21" value="Nada">
+            <label for="qsm_pergunta21_opcao1">Nada</label><br>
+
+            <input type="radio" id="qsm_pergunta21_opcao2" name="qsm_pergunta21" value="Nem tanto">
+            <label for="qsm_pergunta21_opcao2">Nem tanto</label><br>
+
+            <input type="radio" id="qsm_pergunta21_opcao3" name="qsm_pergunta21" value="Um pouco">
+            <label for="qsm_pergunta21_opcao3">Um pouco</label><br>
+
+            <input type="radio" id="qsm_pergunta21_opcao4" name="qsm_pergunta21" value="Bastante">
+            <label for="qsm_pergunta21_opcao4">Bastante</label><br>
+
+            <input type="radio" id="qsm_pergunta21_opcao5" name="qsm_pergunta21" value="Muito">
+            <label for="qsm_pergunta21_opcao5">Muito</label><br>
+
+            
+            <button id="clean" type="button" onclick="limparSelecoes('qsm_pergunta21')">x</button>
+        </fieldset>
+
+        <br>
+        <button type="button" onclick="limparRespostas()">Limpar Respostas</button>
+    </form>
+
+    <div class="All_div">
+        <div id="div-QSM"></div>
+    </div>
+    
+    <script src="../JS/iframeResizer.contentWindow.min.js"></script>
+
+    <script src="../JS/pdf_maker.js"></script>
+
+    <script>
+        function num_pergunta7(input){
+            var valor = parseInt(input.value);
+            if (valor < 0) {
+                input.value = "0";
+            } else if (valor > 100) {
+                input.value = "100";
+            }
+        }
+
+        function num_pergunta11(input) {
+            var valor = parseInt(input.value);
+            if (valor < 0) {
+                input.value = "0";
+            } else if (valor > 130) {
+                input.value = "130";
+            }
+        }
+    </script>
+
+    <script>
+        function div_QSM(todosValores, todosTextos) {
+
+            // Acessa o elemento do título diretamente pelo ID, já que é único e está no documento
+            const titulo_QSM = document.getElementById('titulo_QSM').outerHTML;
+
+            const divQSM = document.getElementById('div-QSM');
+            divQSM.innerHTML = `
+                <div class="Grupo_div">
+                    <div class="Titulo_grupo">
+                        <div class="Titulo">${titulo_QSM}</div>
+                    </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta1']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta1']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta2']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta2']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta3']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta3']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta4']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta4']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta5']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta5']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta6']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta6']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta7']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta7num']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta8']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta8']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta9']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta9text']}</div>
+                        </div>  
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta10']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta10']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta11']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta11num']}</div>
+                        </div>
+                            
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta12']}</div>
+                                <div class="Pergunta_sub">${todosTextos['QSMpergunta12a']}</div>
+                                    <div class="Resposta_sub">${todosValores['qsmpergunta12a']}</div>
+                        </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta_sub">${todosTextos['QSMpergunta12b']}</div>
+                                    <div class="Resposta_sub">${todosValores['qsmpergunta12b']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta_sub">${todosTextos['QSMpergunta12c']}</div>
+                                    <div class="Resposta_sub">${todosValores['qsmpergunta12c']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta_sub">${todosTextos['QSMpergunta12d']}</div>
+                                    <div class="Resposta_sub">${todosValores['qsmpergunta12d']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta_sub">${todosTextos['QSMpergunta12e']}</div>
+                                    <div class="Resposta_sub">${todosValores['qsmpergunta12e']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta_sub">${todosTextos['QSMpergunta12f']}</div>
+                                    <div class="Resposta_sub">${todosValores['qsmpergunta12f']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta_sub">${todosTextos['QSMpergunta12g']}</div>
+                                    <div class="Resposta_sub">${todosValores['qsmpergunta12g']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta_sub">${todosTextos['QSMpergunta12h']}</div>
+                                    <div class="Resposta_sub">${todosValores['qsmpergunta12h']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta_sub">${todosTextos['QSMpergunta12i']}</div>
+                                    <div class="Resposta_sub">${todosValores['qsmpergunta12i']}</div>
+                            </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta13']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta13']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta14']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta14']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta15']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta15']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta16']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta16']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta18']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta18']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta19']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta19']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta20']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta20']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['QSMpergunta21']}</div>
+                                <div class="Resposta">${todosValores['qsmpergunta21']}</div>
+                        </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

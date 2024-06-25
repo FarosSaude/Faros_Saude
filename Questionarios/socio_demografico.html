@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style_quest.css">
+    <script src="../JS/JS_quest.js"></script>
+    <script src="../JS/iframe_save.js"></script>
+    
+    <!--
+    <script>import MeuComponente from "../JS/react_beforeunload.js"</script>
+    <script type="module">import MinhaPagina from "../JS/react_beforeunload.js";</script>
+    -->
+    
+
+    <title>Questionário Sociodemográfico</title>
+</head>
+<body>
+    <h2 class="Titulo_user" id="titulo_QSC">Questionário Sociodemográfico</h2>
+    
+    <form action="#">
+        <!-- Pergunta 1 -->
+        <fieldset>
+            <legend id="QSC_pergunta1">1. Qual o seu gênero?:</legend>
+            <input type="radio" id="qsc_pergunta1_opcao1" name="qsc_pergunta1" value="Masculino">
+            <label for="qsc_pergunta1_opcao1">Masculino</label><br>
+            <input type="radio" id="qsc_pergunta1_opcao2" name="qsc_pergunta1" value="Feminino">
+            <label for="qsc_pergunta1_opcao2">Feminino</label><br>
+            
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsc_pergunta1')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 2 -->
+        <fieldset>
+            <legend id="QSC_pergunta2">2. Quantos anos você tem?</legend>
+            <label for="qsc_pergunta2_num"></label>
+            <input type="number" id="qsc_pergunta2_num" name="qsc_pergunta2" placeholder="idade" oninput="num_pergunta2(this)"> anos</input>
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsc_pergunta2')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 3 -->
+        <fieldset>
+            <legend id="QSC_pergunta3">3. Qual o seu nível de educação mais elevado?</legend>
+            <input type="radio" id="qsc_pergunta3_opcao1" name="qsc_pergunta3" value="Ensino Fundamental">
+            <label for="qsc_pergunta3_opcao1">Ensino Fundamental</label><br>
+            <input type="radio" id="qsc_pergunta3_opcao2" name="qsc_pergunta3" value="Nível Médio">
+            <label for="qsc_pergunta3_opcao2">Nível Médio</label><br>
+            <input type="radio" id="qsc_pergunta3_opcao3" name="qsc_pergunta3" value="Graduação">
+            <label for="qsc_pergunta3_opcao3">Graduação</label><br>
+            <input type="radio" id="qsc_pergunta3_opcao4" name="qsc_pergunta3" value="Especialização">
+            <label for="qsc_pergunta3_opcao4">Especialização</label><br>
+            <input type="radio" id="qsc_pergunta3_opcao5" name="qsc_pergunta3" value="Mestrado">
+            <label for="qsc_pergunta3_opcao5">Mestrado</label><br>
+            <input type="radio" id="qsc_pergunta3_opcao6" name="qsc_pergunta3" value="Doutorado">
+            <label for="qsc_pergunta3_opcao6">Doutorado</label><br>
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsc_pergunta3')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 4 -->
+        <fieldset>
+            <legend id="QSC_pergunta4">4. Pratica alguma atividade Física?</legend>
+            <input type="radio" id="qsc_pergunta4_opcao1" name="qsc_pergunta4" value="Sim">
+            <label for="qsc_pergunta4_opcao1">Sim</label><br>
+            <input type="radio" id="qsc_pergunta4_opcao2" name="qsc_pergunta4" value="Não">
+            <label for="qsc_pergunta4_opcao2">Não</label><br>
+            <label for="qsc_pergunta4_num"></label>
+            <input type="number" id="qsc_pergunta4_num" name="qsc_pergunta4" placeholder="Se sim, quantas vezes por semana?" oninput="num_pergunta4(this)"></input>
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsc_pergunta4')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 5 -->
+        <fieldset>
+            <legend id="QSC_pergunta5">5. Considera-se uma pessoa saudável?</legend>
+            <input type="radio" id="qsc_pergunta5_opcao1" name="qsc_pergunta5" value="Sim">
+            <label for="qsc_pergunta5_opcao1">Sim</label><br>
+            <input type="radio" id="qsc_pergunta5_opcao2" name="qsc_pergunta5" value="Mais ou menos">
+            <label for="qsc_pergunta5_opcao2">Mais ou menos</label><br>
+            <input type="radio" id="qsc_pergunta5_opcao3" name="qsc_pergunta5" value="Não">
+            <label for="qsc_pergunta5_opcao3">Não</label><br>
+            
+            <button id="clean" type="button" onclick="limparSelecoes('qsc_pergunta5')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 6 -->
+        <fieldset>
+            <legend id="QSC_pergunta6">6. Possui alguma doença que o(a) limite?</legend>
+            <input type="radio" id="qsc_pergunta6_opcao1" name="qsc_pergunta6" value="Sim">
+            <label for="qsc_pergunta6_opcao1">Sim</label><br>
+            <input type="radio" id="qsc_pergunta6_opcao2" name="qsc_pergunta6" value="Não">
+            <label for="qsc_pergunta6_opcao2">Não</label><br>
+            
+            <button id="clean" type="button" onclick="limparSelecoes('qsc_pergunta6')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 7 -->
+        <fieldset>
+            <legend id="QSC_pergunta7">7. Apresenta algum dos seguintes desconfortos?</legend>
+            <label for="qsc_pergunta7_opcao1">Sonolência</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao1" name="qsc_pergunta7[]" value="Sonolência"><br>
+
+            <label for="qsc_pergunta7_opcao2">Diarreia</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao2" name="qsc_pergunta7[]" value="Diarreia"><br>
+
+            <label for="qsc_pergunta7_opcao3">Diminuição do apetite</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao3" name="qsc_pergunta7[]" value="Diminuição do apetite"><br>
+
+            <label for="qsc_pergunta7_opcao4">Vômitos</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao4" name="qsc_pergunta7[]" value="Vômitos"><br>
+
+            <label for="qsc_pergunta7_opcao5">Fadiga</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao5" name="qsc_pergunta7[]" value="Fadiga"><br>
+
+            <label for="qsc_pergunta7_opcao6">Perda de peso</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao6" name="qsc_pergunta7[]" value="Perda de peso"><br>
+
+            <label for="qsc_pergunta7_opcao7">Convulsões</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao7" name="qsc_pergunta7[]" value="Convulsões"><br>
+
+            <label for="qsc_pergunta7_opcao8">Aumento do apetite</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao8" name="qsc_pergunta7[]" value="Aumento do apetite"><br>
+
+            <label for="qsc_pergunta7_opcao9">Letargia</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao9" name="qsc_pergunta7[]" value="Letargia"><br>
+
+            <label for="qsc_pergunta7_opcao10">Alterações de humor</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao10" name="qsc_pergunta7[]" value="Alterações de humor"><br>
+
+            <label for="qsc_pergunta7_opcao11">Envolvimento em acidentes (principalmente em trânsito - com óbitos)</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao11" name="qsc_pergunta7[]" value="Envolvimento em acidentes (principalmente em trânsito - com óbitos)"><br>
+
+            <label for="qsc_pergunta7_opcao12">Depressão</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao12" name="qsc_pergunta7[]" value="Depressão"><br>
+
+            <label for="qsc_pergunta7_opcao13">Estresse</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao13" name="qsc_pergunta7[]" value="Estresse"><br>
+
+            <label for="qsc_pergunta7_opcao14">Déficit de atenção, concentração ou memória</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao14" name="qsc_pergunta7[]" value="Déficit de atenção, concentração ou memória"><br>
+
+            <label for="qsc_pergunta7_opcao15">Prejuízo do funcionamento social, familiar, ocupacional ou acadêmico</label>
+            <input type="checkbox" id="qsc_pergunta15_opcao7" name="qsc_pergunta7[]" value="Prejuízo do funcionamento social, familiar, ocupacional ou acadêmico"><br>
+
+            <label for="qsc_pergunta7_opcao16">Alteração do humor/irritabilidade</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao16" name="qsc_pergunta7[]" value="Alteração do humor/irritabilidade"><br>
+
+            <label for="qsc_pergunta7_opcao17">Alterações comportamentais (ex. hiperatividade, impulsividade, agressividade)</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao17" name="qsc_pergunta7[]" value="Alterações comportamentais (ex. hiperatividade, impulsividade, agressividade)"><br>
+
+            <label for="qsc_pergunta7_opcao18">Perda de motivação</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao18" name="qsc_pergunta7[]" value="Perda de motivação"><br>
+
+            <label for="qsc_pergunta7_opcao19">Preocupação ou insatisfação com o sono</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao19" name="qsc_pergunta7[]" value="Preocupação ou insatisfação com o sono"><br>
+
+            <label for="qsc_pergunta7_opcao20">Alteração de consciência</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao20" name="qsc_pergunta7[]" value="Alteração de consciência"><br>
+
+            <label for="qsc_pergunta7_opcao21">Alteração de higiene pessoal</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao21" name="qsc_pergunta7[]" value="Alteração de higiene pessoal"><br>
+
+            <label for="qsc_pergunta7_opcao22">Alterações de estado nutricional</label>
+            <input type="checkbox" id="qsc_pergunta7_opcao22" name="qsc_pergunta7[]" value="Alterações de estado nutricional"><br>
+            <br>
+            <textarea id="qsc_pergunta7_text" placeholder="Outras queixas:"></textarea>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('qsc_pergunta7[]')">x</button>
+        </fieldset>
+
+        <br>
+        <button type="button" onclick="limparRespostas()">Limpar Respostas</button>
+    </form>
+
+<!-- div que recebe as questões para impressão individual -->
+<div class="All_div">
+    <div id="div-QSC"></div>
+</div>
+
+    <script src="../JS/iframeResizer.contentWindow.min.js"></script>
+
+    <script src="../JS/pdf_maker.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <script>
+        // Restrição numérica pergunta 2
+        function num_pergunta2(input) {
+            var valor = parseInt(input.value);
+            if (valor < 0) {
+                input.value = "0";
+            } else if (valor > 130) {
+                input.value = "130";
+            }
+        }
+
+        // Restrição numérica pergunta 4
+        function num_pergunta4(input) {
+            var valor = parseInt(input.value);
+            if (valor < 0) {
+                input.value = "0";
+            } else if (valor > 70) {
+                input.value = "70";
+            }
+        }
+    </script>
+    <script>
+        // Lista de questionários
+        let questionarios = ["qsc", "est", "ese", "ess", "esp", "qsm", "iab", "isi", "qmv", "eia", "whoqol"];
+        // Lista de legendas
+        let legendas = ["QSC", "EST", "ESE", "ESS", "ESP", "QSM", "IAB", "ISI", "QMV", "EIA", "WHOQOL"];
+
+
+        // Alocar as respostas do questionário na div
+        function div_QSC(todosValores, todosTextos){
+            src="../JS/verificar.js"
+            // Verifica se todosValores e todosTextos não são undefined
+            console.log(todosTextos);
+            console.log(todosValores);
+
+            // Acessa o elemento do título diretamente pelo ID, já que é único e está no documento
+            const titulo_QSC = document.getElementById('titulo_QSC').outerHTML;
+
+                const divQSC = document.getElementById('div-QSC');
+                    console.log(divQSC);  // Adicione esta linha
+                divQSC.innerHTML = `
+                    <div class="Grupo_div">
+                        <div class="Titulo_grupo">
+                            <div class="Titulo">${titulo_QSC}</div>
+                        </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta">${todosTextos['QSCpergunta1']}</div>
+                                    <div class="Resposta">${todosValores['qscpergunta1']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta">${todosTextos['QSCpergunta2']}</div>
+                                    <div class="Resposta">${todosValores['qscpergunta2num']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta">${todosTextos['QSCpergunta3']}</div>
+                                    <div class="Resposta">${todosValores['qscpergunta3']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta">${todosTextos['QSCpergunta4']}</div>
+                                    <div class="Resposta">${todosValores['qscpergunta4']}</div>
+                                    <div class="Resposta">${todosValores['qscpergunta4num']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta">${todosTextos['QSCpergunta5']}</div>
+                                    <div class="Resposta">${todosValores['qscpergunta5']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta">${todosTextos['QSCpergunta6']}</div>
+                                    <div class="Resposta">${todosValores['qscpergunta6']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta">${todosTextos['QSCpergunta7']}</div>
+                                    <div class="Resposta">${todosValores['qscpergunta7']}</div>
+                                    <div class="Resposta">${todosValores['qscpergunta7text']}</div>
+                            </div>
+                    </div>
+                `;
+
+    }
+
+    </script>
+</body>
+</html>

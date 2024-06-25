@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style_quest.css">
+    <script src="../JS/JS_quest.js"></script>
+
+    <title>WHOQOL ABREVIADO</title>
+</head>
+<body>
+    <h2 class="Titulo_user" id="titulo_WHOQOL">WHOQOL ABREVIADO</h2>
+
+    <p class="descricao">
+        Este questionário trata sobre como você se sente a respeito de sua qualidade de vida, saúde e outras áreas de sua vida. Por favor,responda as próximas questões, tomando como referência as duas últimas semanas. Circule a alternativa que lhe parece mais apropriada e lembre-se, não há resposta certa ou errada, pois trata-se de sua percepção sobre aspectos da vida
+    </p>
+
+    <form action="#">
+
+        <!-- Pergunta 1 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta1">01. Como você avaliaria sua qualidade de vida?</legend>
+
+            <input type="radio" id="whoqol_pergunta1_opcao1" name="whoqol_pergunta1" value="Muito ruim">
+            <label for="whoqol_pergunta1_opcao1">Muito ruim</label><br>
+
+            <input type="radio" id="whoqol_pergunta1_opcao2" name="whoqol_pergunta1" value="Ruim">
+            <label for="whoqol_pergunta1_opcao2">Ruim</label><br>
+
+            <input type="radio" id="whoqol_pergunta1_opcao3" name="whoqol_pergunta1" value="Nem ruim nem boa">
+            <label for="whoqol_pergunta1_opcao3">Nem ruim nem boa</label><br>
+
+            <input type="radio" id="whoqol_pergunta1_opcao4" name="whoqol_pergunta1" value="Boa">
+            <label for="whoqol_pergunta1_opcao4">Boa</label><br>
+
+            <input type="radio" id="whoqol_pergunta1_opcao5" name="whoqol_pergunta1" value="Muito boa">
+            <label for="whoqol_pergunta1_opcao5">Muito boa</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta1')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 2 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta2">02. Quão satisfeito(a) você está com a sua saúde?</legend>
+
+            <input type="radio" id="whoqol_pergunta2_opcao1" name="whoqol_pergunta2" value="Muito insatisfeito">
+            <label for="whoqol_pergunta2_opcao1">Muito insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta2_opcao2" name="whoqol_pergunta2" value="Insatisfeito">
+            <label for="whoqol_pergunta2_opcao2">Insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta2_opcao3" name="whoqol_pergunta2" value="Nem satisfeito nem insatisfeito">
+            <label for="whoqol_pergunta2_opcao3">Nem satisfeito nem insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta2_opcao4" name="whoqol_pergunta2" value="Satisfeito">
+            <label for="whoqol_pergunta2_opcao4">Satisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta2_opcao5" name="whoqol_pergunta2" value="Muito satisfeito">
+            <label for="whoqol_pergunta2_opcao5">Muito satisfeito</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta2')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 3 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta3">03. Em que medida você acha que sua dor (física) impede você de fazer o que você precisa?</legend>
+
+            <input type="radio" id="whoqol_pergunta3_opcao1" name="whoqol_pergunta3" value="Nada">
+            <label for="whoqol_pergunta3_opcao1">Nada</label><br>
+
+            <input type="radio" id="whoqol_pergunta3_opcao2" name="whoqol_pergunta3" value="Muito pouco">
+            <label for="whoqol_pergunta3_opcao2">Muito pouco</label><br>
+
+            <input type="radio" id="whoqol_pergunta3_opcao3" name="whoqol_pergunta3" value="Mais ou menos">
+            <label for="whoqol_pergunta3_opcao3">Mais ou menos</label><br>
+
+            <input type="radio" id="whoqol_pergunta3_opcao4" name="whoqol_pergunta3" value="Bastante">
+            <label for="whoqol_pergunta3_opcao4">Bastante</label><br>
+
+            <input type="radio" id="whoqol_pergunta3_opcao5" name="whoqol_pergunta3" value="Extremamente">
+            <label for="whoqol_pergunta3_opcao5">Extremamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta3')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 4 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta4">04. O quanto você precisa de algum tratamento médico para levar sua vida diária?</legend>
+
+            <input type="radio" id="whoqol_pergunta4_opcao1" name="whoqol_pergunta4" value="Nada">
+            <label for="whoqol_pergunta4_opcao1">Nada</label><br>
+
+            <input type="radio" id="whoqol_pergunta4_opcao2" name="whoqol_pergunta4" value="Muito pouco">
+            <label for="whoqol_pergunta4_opcao2">Muito pouco</label><br>
+
+            <input type="radio" id="whoqol_pergunta4_opcao3" name="whoqol_pergunta4" value="Mais ou menos">
+            <label for="whoqol_pergunta4_opcao3">Mais ou menos</label><br>
+
+            <input type="radio" id="whoqol_pergunta4_opcao4" name="whoqol_pergunta4" value="Bastante">
+            <label for="whoqol_pergunta4_opcao4">Bastante</label><br>
+
+            <input type="radio" id="whoqol_pergunta4_opcao5" name="whoqol_pergunta4" value="Extremamente">
+            <label for="whoqol_pergunta4_opcao5">Extremamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta4')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 5 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta5">05. O quanto você aproveita a vida?</legend>
+
+            <input type="radio" id="whoqol_pergunta5_opcao1" name="whoqol_pergunta5" value="Nada">
+            <label for="whoqol_pergunta5_opcao1">Nada</label><br>
+
+            <input type="radio" id="whoqol_pergunta5_opcao2" name="whoqol_pergunta5" value="Muito pouco">
+            <label for="whoqol_pergunta5_opcao2">Muito pouco</label><br>
+
+            <input type="radio" id="whoqol_pergunta5_opcao3" name="whoqol_pergunta5" value="Mais ou menos">
+            <label for="whoqol_pergunta5_opcao3">Mais ou menos</label><br>
+
+            <input type="radio" id="whoqol_pergunta5_opcao4" name="whoqol_pergunta5" value="Bastante">
+            <label for="whoqol_pergunta5_opcao4">Bastante</label><br>
+
+            <input type="radio" id="whoqol_pergunta5_opcao5" name="whoqol_pergunta5" value="Extremamente">
+            <label for="whoqol_pergunta5_opcao5">Extremamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta5')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 6 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta6">06. Em que medida você acha que a sua vida tem sentido?</legend>
+
+            <input type="radio" id="whoqol_pergunta6_opcao1" name="whoqol_pergunta6" value="Nada">
+            <label for="whoqol_pergunta6_opcao1">Nada</label><br>
+
+            <input type="radio" id="whoqol_pergunta6_opcao2" name="whoqol_pergunta6" value="Muito pouco">
+            <label for="whoqol_pergunta6_opcao2">Muito pouco</label><br>
+
+            <input type="radio" id="whoqol_pergunta6_opcao3" name="whoqol_pergunta6" value="Mais ou menos">
+            <label for="whoqol_pergunta6_opcao3">Mais ou menos</label><br>
+
+            <input type="radio" id="whoqol_pergunta6_opcao4" name="whoqol_pergunta6" value="Bastante">
+            <label for="whoqol_pergunta6_opcao4">Bastante</label><br>
+
+            <input type="radio" id="whoqol_pergunta6_opcao5" name="whoqol_pergunta6" value="Extremamente">
+            <label for="whoqol_pergunta6_opcao5">Extremamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta6')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 7 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta7">07. O quanto você consegue se concentrar?</legend>
+
+            <input type="radio" id="whoqol_pergunta7_opcao1" name="whoqol_pergunta7" value="Nada">
+            <label for="whoqol_pergunta7_opcao1">Nada</label><br>
+
+            <input type="radio" id="whoqol_pergunta7_opcao2" name="whoqol_pergunta7" value="Muito pouco">
+            <label for="whoqol_pergunta7_opcao2">Muito pouco</label><br>
+
+            <input type="radio" id="whoqol_pergunta7_opcao3" name="whoqol_pergunta7" value="Mais ou menos">
+            <label for="whoqol_pergunta7_opcao3">Mais ou menos</label><br>
+
+            <input type="radio" id="whoqol_pergunta7_opcao4" name="whoqol_pergunta7" value="Bastante">
+            <label for="whoqol_pergunta7_opcao4">Bastante</label><br>
+
+            <input type="radio" id="whoqol_pergunta7_opcao5" name="whoqol_pergunta7" value="Extremamente">
+            <label for="whoqol_pergunta7_opcao5">Extremamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta7')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 8 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta8">08. Quão seguro(a) você se sente em sua vida diária?</legend>
+
+            <input type="radio" id="whoqol_pergunta8_opcao1" name="whoqol_pergunta8" value="Nada">
+            <label for="whoqol_pergunta8_opcao1">Nada</label><br>
+
+            <input type="radio" id="whoqol_pergunta8_opcao2" name="whoqol_pergunta8" value="Muito pouco">
+            <label for="whoqol_pergunta8_opcao2">Muito pouco</label><br>
+
+            <input type="radio" id="whoqol_pergunta8_opcao3" name="whoqol_pergunta8" value="Mais ou menos">
+            <label for="whoqol_pergunta8_opcao3">Mais ou menos</label><br>
+
+            <input type="radio" id="whoqol_pergunta8_opcao4" name="whoqol_pergunta8" value="Bastante">
+            <label for="whoqol_pergunta8_opcao4">Bastante</label><br>
+
+            <input type="radio" id="whoqol_pergunta8_opcao5" name="whoqol_pergunta8" value="Extremamente">
+            <label for="whoqol_pergunta8_opcao5">Extremamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta8')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 9 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta9">09. Quão saudável é o seu ambiente físico (clima, barulho, poluição, atrativos)?</legend>
+
+            <input type="radio" id="whoqol_pergunta9_opcao1" name="whoqol_pergunta9" value="Nada">
+            <label for="whoqol_pergunta9_opcao1">Nada</label><br>
+
+            <input type="radio" id="whoqol_pergunta9_opcao2" name="whoqol_pergunta9" value="Muito pouco">
+            <label for="whoqol_pergunta9_opcao2">Muito pouco</label><br>
+
+            <input type="radio" id="whoqol_pergunta9_opcao3" name="whoqol_pergunta9" value="Mais ou menos">
+            <label for="whoqol_pergunta9_opcao3">Mais ou menos</label><br>
+
+            <input type="radio" id="whoqol_pergunta9_opcao4" name="whoqol_pergunta9" value="Bastante">
+            <label for="whoqol_pergunta9_opcao4">Bastante</label><br>
+
+            <input type="radio" id="whoqol_pergunta9_opcao5" name="whoqol_pergunta9" value="Extremamente">
+            <label for="whoqol_pergunta9_opcao5">Extremamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta9')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 10 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta10">10. Você tem energia suficiente para seu dia-a-dia?</legend>
+            
+            <input type="radio" id="whoqol_pergunta10_opcao1" name="whoqol_pergunta10" value="Nada">
+            <label for="whoqol_pergunta10_opcao1">Nada</label><br>
+
+            <input type="radio" id="whoqol_pergunta10_opcao2" name="whoqol_pergunta10" value="Muito pouco">
+            <label for="whoqol_pergunta10_opcao2">Muito pouco</label><br>
+
+            <input type="radio" id="whoqol_pergunta10_opcao3" name="whoqol_pergunta10" value="Médio">
+            <label for="whoqol_pergunta10_opcao3">Médio</label><br>
+
+            <input type="radio" id="whoqol_pergunta10_opcao4" name="whoqol_pergunta10" value="Muito">
+            <label for="whoqol_pergunta10_opcao4">Muito</label><br>
+
+            <input type="radio" id="whoqol_pergunta10_opcao5" name="whoqol_pergunta10" value="Completamente">
+            <label for="whoqol_pergunta10_opcao5">Completamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta10')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 11 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta11">11. Você é capaz de aceitar sua aparência física?</legend>
+            
+            <input type="radio" id="whoqol_pergunta11_opcao1" name="whoqol_pergunta11" value="Nada">
+            <label for="whoqol_pergunta11_opcao1">Nada</label><br>
+
+            <input type="radio" id="whoqol_pergunta11_opcao2" name="whoqol_pergunta11" value="Muito pouco">
+            <label for="whoqol_pergunta11_opcao2">Muito pouco</label><br>
+
+            <input type="radio" id="whoqol_pergunta11_opcao3" name="whoqol_pergunta11" value="Médio">
+            <label for="whoqol_pergunta11_opcao3">Médio</label><br>
+
+            <input type="radio" id="whoqol_pergunta11_opcao4" name="whoqol_pergunta11" value="Muito">
+            <label for="whoqol_pergunta11_opcao4">Muito</label><br>
+
+            <input type="radio" id="whoqol_pergunta11_opcao5" name="whoqol_pergunta11" value="Completamente">
+            <label for="whoqol_pergunta11_opcao5">Completamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta11')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 12 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta12">12. Você tem dinheiro suficiente para satisfazer suas necessidades?</legend>
+            
+            <input type="radio" id="whoqol_pergunta12_opcao1" name="whoqol_pergunta12" value="Nada">
+            <label for="whoqol_pergunta12_opcao1">Nada</label><br>
+
+            <input type="radio" id="whoqol_pergunta12_opcao2" name="whoqol_pergunta12" value="Muito pouco">
+            <label for="whoqol_pergunta12_opcao2">Muito pouco</label><br>
+
+            <input type="radio" id="whoqol_pergunta12_opcao3" name="whoqol_pergunta12" value="Médio">
+            <label for="whoqol_pergunta12_opcao3">Médio</label><br>
+
+            <input type="radio" id="whoqol_pergunta12_opcao4" name="whoqol_pergunta12" value="Muito">
+            <label for="whoqol_pergunta12_opcao4">Muito</label><br>
+
+            <input type="radio" id="whoqol_pergunta12_opcao5" name="whoqol_pergunta12" value="Completamente">
+            <label for="whoqol_pergunta12_opcao5">Completamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta12')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 13 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta13">13. Quão disponíveis para você estão as informações que precisa no seu dia-a-dia?</legend>
+            
+            <input type="radio" id="whoqol_pergunta13_opcao1" name="whoqol_pergunta13" value="Nada">
+            <label for="whoqol_pergunta13_opcao1">Nada</label><br>
+
+            <input type="radio" id="whoqol_pergunta13_opcao2" name="whoqol_pergunta13" value="Muito pouco">
+            <label for="whoqol_pergunta13_opcao2">Muito pouco</label><br>
+
+            <input type="radio" id="whoqol_pergunta13_opcao3" name="whoqol_pergunta13" value="Médio">
+            <label for="whoqol_pergunta13_opcao3">Médio</label><br>
+
+            <input type="radio" id="whoqol_pergunta13_opcao4" name="whoqol_pergunta13" value="Muito">
+            <label for="whoqol_pergunta13_opcao4">Muito</label><br>
+
+            <input type="radio" id="whoqol_pergunta13_opcao5" name="whoqol_pergunta13" value="Completamente">
+            <label for="whoqol_pergunta13_opcao5">Completamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta13')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 14 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta14">14. Em que medida você tem oportunidades de atividade de lazer?</legend>
+            
+            <input type="radio" id="whoqol_pergunta14_opcao1" name="whoqol_pergunta14" value="Nada">
+            <label for="whoqol_pergunta14_opcao1">Nada</label><br>
+
+            <input type="radio" id="whoqol_pergunta14_opcao2" name="whoqol_pergunta14" value="Muito pouco">
+            <label for="whoqol_pergunta14_opcao2">Muito pouco</label><br>
+
+            <input type="radio" id="whoqol_pergunta14_opcao3" name="whoqol_pergunta14" value="Médio">
+            <label for="whoqol_pergunta14_opcao3">Médio</label><br>
+
+            <input type="radio" id="whoqol_pergunta14_opcao4" name="whoqol_pergunta14" value="Muito">
+            <label for="whoqol_pergunta14_opcao4">Muito</label><br>
+
+            <input type="radio" id="whoqol_pergunta14_opcao5" name="whoqol_pergunta14" value="Completamente">
+            <label for="whoqol_pergunta14_opcao5">Completamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta14')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 15 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta15">15. Quão bem você é capaz de se locomover?</legend>
+
+            <input type="radio" id="whoqol_pergunta15_opcao1" name="whoqol_pergunta15" value="Muito ruim">
+            <label for="whoqol_pergunta15_opcao1">Muito ruim</label><br>
+
+            <input type="radio" id="whoqol_pergunta15_opcao2" name="whoqol_pergunta15" value="Ruim">
+            <label for="whoqol_pergunta15_opcao2">Ruim</label><br>
+
+            <input type="radio" id="whoqol_pergunta15_opcao3" name="whoqol_pergunta15" value="Nem ruim nem bom">
+            <label for="whoqol_pergunta15_opcao3">Nem ruim nem bom</label><br>
+
+            <input type="radio" id="whoqol_pergunta15_opcao4" name="whoqol_pergunta15" value="Bom">
+            <label for="whoqol_pergunta15_opcao4">Bom</label><br>
+
+            <input type="radio" id="whoqol_pergunta15_opcao5" name="whoqol_pergunta15" value="Muito bom">
+            <label for="whoqol_pergunta15_opcao5">Muito bom</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta15')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 16 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta16">16. Quão satisfeito(a) você está com o seu sono?</legend>
+
+            <input type="radio" id="whoqol_pergunta16_opcao1" name="whoqol_pergunta16" value="Muito insatisfeito">
+            <label for="whoqol_pergunta16_opcao1">Muito insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta16_opcao2" name="whoqol_pergunta16" value="Insatisfeito">
+            <label for="whoqol_pergunta16_opcao2">Insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta16_opcao3" name="whoqol_pergunta16" value="Nem satisfeito nem insatisfeito">
+            <label for="whoqol_pergunta16_opcao3">Nem satisfeito nem insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta16_opcao4" name="whoqol_pergunta16" value="Satisfeito">
+            <label for="whoqol_pergunta16_opcao4">Satisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta16_opcao5" name="whoqol_pergunta16" value="Muito satisfeito">
+            <label for="whoqol_pergunta16_opcao5">Muito satisfeito</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta16')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 17 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta17">17. Quão satisfeito(a) você está com sua capacidade de desempenhar as atividades do seu dia-a-dia?</legend>
+
+            <input type="radio" id="whoqol_pergunta17_opcao1" name="whoqol_pergunta17" value="Muito insatisfeito">
+            <label for="whoqol_pergunta17_opcao1">Muito insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta17_opcao2" name="whoqol_pergunta17" value="Insatisfeito">
+            <label for="whoqol_pergunta17_opcao2">Insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta17_opcao3" name="whoqol_pergunta17" value="Nem satisfeito nem insatisfeito">
+            <label for="whoqol_pergunta17_opcao3">Nem satisfeito nem insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta17_opcao4" name="whoqol_pergunta17" value="Satisfeito">
+            <label for="whoqol_pergunta17_opcao4">Satisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta17_opcao5" name="whoqol_pergunta17" value="Muito satisfeito">
+            <label for="whoqol_pergunta17_opcao5">Muito satisfeito</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta17')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 18 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta18">18. Quão satisfeito(a) você está com sua capacidade para o trabalho?</legend>
+
+            <input type="radio" id="whoqol_pergunta18_opcao1" name="whoqol_pergunta18" value="Muito insatisfeito">
+            <label for="whoqol_pergunta18_opcao1">Muito insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta18_opcao2" name="whoqol_pergunta18" value="Insatisfeito">
+            <label for="whoqol_pergunta18_opcao2">Insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta18_opcao3" name="whoqol_pergunta18" value="Nem satisfeito nem insatisfeito">
+            <label for="whoqol_pergunta18_opcao3">Nem satisfeito nem insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta18_opcao4" name="whoqol_pergunta18" value="Satisfeito">
+            <label for="whoqol_pergunta18_opcao4">Satisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta18_opcao5" name="whoqol_pergunta18" value="Muito satisfeito">
+            <label for="whoqol_pergunta18_opcao5">Muito satisfeito</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta18')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 19 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta19">19. Quão satisfeito(a) você está consigo mesmo?</legend>
+
+            <input type="radio" id="whoqol_pergunta19_opcao1" name="whoqol_pergunta19" value="Muito insatisfeito">
+            <label for="whoqol_pergunta19_opcao1">Muito insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta19_opcao2" name="whoqol_pergunta19" value="Insatisfeito">
+            <label for="whoqol_pergunta19_opcao2">Insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta19_opcao3" name="whoqol_pergunta19" value="Nem satisfeito nem insatisfeito">
+            <label for="whoqol_pergunta19_opcao3">Nem satisfeito nem insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta19_opcao4" name="whoqol_pergunta19" value="Satisfeito">
+            <label for="whoqol_pergunta19_opcao4">Satisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta19_opcao5" name="whoqol_pergunta19" value="Muito satisfeito">
+            <label for="whoqol_pergunta19_opcao5">Muito satisfeito</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta19')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 20 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta20">20. Quão satisfeito(a) você está com suas relações pessoais (amigos, parentes, conhecidos, colegas)?</legend>
+
+            <input type="radio" id="whoqol_pergunta20_opcao1" name="whoqol_pergunta20" value="Muito insatisfeito">
+            <label for="whoqol_pergunta20_opcao1">Muito insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta20_opcao2" name="whoqol_pergunta20" value="Insatisfeito">
+            <label for="whoqol_pergunta20_opcao2">Insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta20_opcao3" name="whoqol_pergunta20" value="Nem satisfeito nem insatisfeito">
+            <label for="whoqol_pergunta20_opcao3">Nem satisfeito nem insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta20_opcao4" name="whoqol_pergunta20" value="Satisfeito">
+            <label for="whoqol_pergunta20_opcao4">Satisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta20_opcao5" name="whoqol_pergunta20" value="Muito satisfeito">
+            <label for="whoqol_pergunta20_opcao5">Muito satisfeito</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta20')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 21 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta21">21. Quão satisfeito(a) você está com sua vida sexual?</legend>
+
+            <input type="radio" id="whoqol_pergunta21_opcao1" name="whoqol_pergunta21" value="Muito insatisfeito">
+            <label for="whoqol_pergunta21_opcao1">Muito insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta21_opcao2" name="whoqol_pergunta21" value="Insatisfeito">
+            <label for="whoqol_pergunta21_opcao2">Insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta21_opcao3" name="whoqol_pergunta21" value="Nem satisfeito nem insatisfeito">
+            <label for="whoqol_pergunta21_opcao3">Nem satisfeito nem insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta21_opcao4" name="whoqol_pergunta21" value="Satisfeito">
+            <label for="whoqol_pergunta21_opcao4">Satisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta21_opcao5" name="whoqol_pergunta21" value="Muito satisfeito">
+            <label for="whoqol_pergunta21_opcao5">Muito satisfeito</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta21')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 22 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta22">22. Quão satisfeito(a) você está com o apoio que você recebe de seus amigos?</legend>
+
+            <input type="radio" id="whoqol_pergunta22_opcao1" name="whoqol_pergunta22" value="Muito insatisfeito">
+            <label for="whoqol_pergunta22_opcao1">Muito insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta22_opcao2" name="whoqol_pergunta22" value="Insatisfeito">
+            <label for="whoqol_pergunta22_opcao2">Insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta22_opcao3" name="whoqol_pergunta22" value="Nem satisfeito nem insatisfeito">
+            <label for="whoqol_pergunta22_opcao3">Nem satisfeito nem insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta22_opcao4" name="whoqol_pergunta22" value="Satisfeito">
+            <label for="whoqol_pergunta22_opcao4">Satisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta22_opcao5" name="whoqol_pergunta22" value="Muito satisfeito">
+            <label for="whoqol_pergunta22_opcao5">Muito satisfeito</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta22')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 23 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta23">23. Quão satisfeito(a) você está com as condições do local onde mora?</legend>
+
+            <input type="radio" id="whoqol_pergunta23_opcao1" name="whoqol_pergunta23" value="Muito insatisfeito">
+            <label for="whoqol_pergunta23_opcao1">Muito insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta23_opcao2" name="whoqol_pergunta23" value="Insatisfeito">
+            <label for="whoqol_pergunta23_opcao2">Insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta23_opcao3" name="whoqol_pergunta23" value="Nem satisfeito nem insatisfeito">
+            <label for="whoqol_pergunta23_opcao3">Nem satisfeito nem insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta23_opcao4" name="whoqol_pergunta23" value="Satisfeito">
+            <label for="whoqol_pergunta23_opcao4">Satisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta23_opcao5" name="whoqol_pergunta23" value="Muito satisfeito">
+            <label for="whoqol_pergunta23_opcao5">Muito satisfeito</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta23')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 24 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta24">24. Quão satisfeito(a) você está com o seu acesso aos serviços de saúde?</legend>
+
+            <input type="radio" id="whoqol_pergunta24_opcao1" name="whoqol_pergunta24" value="Muito insatisfeito">
+            <label for="whoqol_pergunta24_opcao1">Muito insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta24_opcao2" name="whoqol_pergunta24" value="Insatisfeito">
+            <label for="whoqol_pergunta24_opcao2">Insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta24_opcao3" name="whoqol_pergunta24" value="Nem satisfeito nem insatisfeito">
+            <label for="whoqol_pergunta24_opcao3">Nem satisfeito nem insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta24_opcao4" name="whoqol_pergunta24" value="Satisfeito">
+            <label for="whoqol_pergunta24_opcao4">Satisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta24_opcao5" name="whoqol_pergunta24" value="Muito satisfeito">
+            <label for="whoqol_pergunta24_opcao5">Muito satisfeito</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta24')">x</button>
+        </fieldset>
+        
+        <!-- Pergunta 25 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta25">25. Quão satisfeito(a) você está com o seu meio de transporte?</legend>
+
+            <input type="radio" id="whoqol_pergunta25_opcao1" name="whoqol_pergunta25" value="Muito insatisfeito">
+            <label for="whoqol_pergunta25_opcao1">Muito insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta25_opcao2" name="whoqol_pergunta25" value="Insatisfeito">
+            <label for="whoqol_pergunta25_opcao2">Insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta25_opcao3" name="whoqol_pergunta25" value="Nem satisfeito nem insatisfeito">
+            <label for="whoqol_pergunta25_opcao3">Nem satisfeito nem insatisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta25_opcao4" name="whoqol_pergunta25" value="Satisfeito">
+            <label for="whoqol_pergunta25_opcao4">Satisfeito</label><br>
+
+            <input type="radio" id="whoqol_pergunta25_opcao5" name="whoqol_pergunta25" value="Muito satisfeito">
+            <label for="whoqol_pergunta25_opcao5">Muito satisfeito</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta25')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 26 -->
+        <fieldset>
+            <legend id="WHOQOL_pergunta26">26. Com que frequência você tem sentimentos negativos tais como mau humor, desespero, ansiedade, depressão?</legend>
+
+            <input type="radio" id="whoqol_pergunta26_opcao1" name="whoqol_pergunta26" value="Nunca">
+            <label for="whoqol_pergunta26_opcao1">Nunca</label><br>
+
+            <input type="radio" id="whoqol_pergunta26_opcao2" name="whoqol_pergunta26" value="Algumas vezes">
+            <label for="whoqol_pergunta26_opcao2">Algumas vezes</label><br>
+
+            <input type="radio" id="whoqol_pergunta26_opcao3" name="whoqol_pergunta26" value="Frequentemente">
+            <label for="whoqol_pergunta26_opcao3">Frequentemente</label><br>
+
+            <input type="radio" id="whoqol_pergunta26_opcao4" name="whoqol_pergunta26" value="Muito frequentemente">
+            <label for="whoqol_pergunta26_opcao4">Muito frequentemente</label><br>
+
+            <input type="radio" id="whoqol_pergunta26_opcao5" name="whoqol_pergunta26" value="Sempre">
+            <label for="whoqol_pergunta26_opcao5">Sempre</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('whoqol_pergunta26')">x</button>
+        </fieldset>
+
+        <br>
+        <button type="button" onclick="limparRespostas()">Limpar Respostas</button>
+    </form>
+
+    <div class="All_div">
+        <div id="div-WHOQOL"></div>
+    </div>
+
+    <script src="../JS/iframeResizer.contentWindow.min.js"></script>
+
+    <script src="../JS/pdf_maker.js"></script>
+
+    <script>
+        function div_WHOQOL(todosValores, todosTextos) {
+
+            // Acessa o elemento do título diretamente pelo ID, já que é único e está no documento
+            const titulo_WHOQOL = document.getElementById('titulo_WHOQOL').outerHTML;
+
+            const divWHOQOL = document.getElementById('div-WHOQOL');
+            divWHOQOL.innerHTML = `
+                <div class="Grupo_div">
+                    <div class="Titulo_grupo">
+                        <div class="Titulo">${titulo_WHOQOL}</div>
+                    </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta1']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta1']}</div>
+                        </div>
+                        
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta2']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta2']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta3']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta3']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta4']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta4']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta5']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta5']}</div>
+                        </div>
+                        
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta6']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta6']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta7']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta7']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta8']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta8']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta9']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta9']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta10']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta10']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta11']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta11']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta12']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta12']}</div>
+                        </div>
+                        
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta13']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta13']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta14']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta14']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta15']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta15']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta16']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta16']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta17']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta17']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta18']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta18']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta19']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta19']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta20']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta20']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta21']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta21']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta22']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta22']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta23']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta23']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta24']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta24']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta25']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta25']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['WHOQOLpergunta26']}</div>
+                                <div class="Resposta">${todosValores['whoqolpergunta26']}</div>
+                        </div>
+                </div>
+            `;            
+        }
+    </script>
+</body>
+</html>

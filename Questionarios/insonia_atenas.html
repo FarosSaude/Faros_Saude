@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style_quest.css">
+    <script src="../JS/JS_quest.js"></script>
+
+    <title>ESCALA DE INSÔNIA DE ATENAS</title>
+</head>
+<body>
+    <h2 class="Titulo_user" id="titulo_EIA">ESCALA DE INSÔNIA DE ATENAS (BASEADA NO CID 10)</h2>
+    
+    <p class="descricao">
+        INSTRUÇÕES: Esta escala registra sua avaliação pessoal de qualquer dificuldade de sono que você possa ter. Faça um círculo em volta do número que melhor estima sua dificuldade, desde que isso tenha ocorrido pelo menos três vezes por semana no último mês. 
+    </p>
+
+    <form action="#">
+        <!-- Pergunta 1 -->
+        <fieldset>
+            <legend id="EIA_pergunta1">1. Início do sono: tempo que demora para adormecer após apagar as luzes</legend>
+
+            <input type="radio" id="eia_pergunta1_opcao1" name="eia_pergunta1" value="Nenhum problema">
+            <label for="eia_pergunta1_opcao1">Nenhum problema</label><br>
+
+            <input type="radio" id="eia_pergunta1_opcao2" name="eia_pergunta1" value="Ligeira demora">
+            <label for="eia_pergunta1_opcao2">Ligeira demora</label><br>
+
+            <input type="radio" id="eia_pergunta1_opcao3" name="eia_pergunta1" value="Moderada demora">
+            <label for="eia_pergunta1_opcao3">Moderada demora</label><br>
+
+            <input type="radio" id="eia_pergunta1_opcao4" name="eia_pergunta1" value="Muita demora ou não dorme">
+            <label for="eia_pergunta1_opcao4">Muita demora ou não dorme</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('eia_pergunta1')">x</button>
+        </fieldset>
+
+
+        <!-- Pergunta 2 -->
+        <fieldset>
+            <legend id="EIA_pergunta2">2. Despertares durante a noite</legend>
+
+            <input type="radio" id="eia_pergunta2_opcao1" name="eia_pergunta2" value="Nenhum problema">
+            <label for="eia_pergunta2_opcao1">Nenhum problema</label><br>
+
+            <input type="radio" id="eia_pergunta2_opcao2" name="eia_pergunta2" value="Pequeno problema">
+            <label for="eia_pergunta2_opcao2">Pequeno problema</label><br>
+
+            <input type="radio" id="eia_pergunta2_opcao3" name="eia_pergunta2" value="Problema considerável">
+            <label for="eia_pergunta2_opcao3">Problema considerável</label><br>
+
+            <input type="radio" id="eia_pergunta2_opcao4" name="eia_pergunta2" value="Problema sério ou não dorme">
+            <label for="eia_pergunta2_opcao4">Problema sério ou não dorme</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('eia_pergunta2')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 3 -->
+        <fieldset>
+            <legend id="EIA_pergunta3">3. Acordar mais cedo que o desejado e não conseguir mais dormir</legend>
+
+            <input type="radio" id="eia_pergunta3_opcao1" name="eia_pergunta3" value="Não é mais cedo">
+            <label for="eia_pergunta3_opcao1">Não é mais cedo</label><br>
+
+            <input type="radio" id="eia_pergunta3_opcao2" name="eia_pergunta3" value="Um pouco mais cedo">
+            <label for="eia_pergunta3_opcao2">Um pouco mais cedo</label><br>
+
+            <input type="radio" id="eia_pergunta3_opcao3" name="eia_pergunta3" value="Moderadamente mais cedo">
+            <label for="eia_pergunta3_opcao3">Moderadamente mais cedo</label><br>
+
+            <input type="radio" id="eia_pergunta3_opcao4" name="eia_pergunta3" value="Muito mais cedo ou não dorme">
+            <label for="eia_pergunta3_opcao4">Muito mais cedo ou não dorme</label><br>
+            
+
+            <button id="clean" type="button" onclick="limparSelecoes('eia_pergunta3')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 4 -->
+        <fieldset>
+            <legend id="EIA_pergunta4">4. Duração total do sono</legend>
+
+            <input type="radio" id="eia_pergunta4_opcao1" name="eia_pergunta4" value="Suficiente">
+            <label for="eia_pergunta4_opcao1">Suficiente</label><br>
+
+            <input type="radio" id="eia_pergunta4_opcao2" name="eia_pergunta4" value="Ligeiramente insuficiente">
+            <label for="eia_pergunta4_opcao2">Ligeiramente insuficiente</label><br>
+
+            <input type="radio" id="eia_pergunta4_opcao3" name="eia_pergunta4" value="Moderadamente insuficiente">
+            <label for="eia_pergunta4_opcao3">Moderadamente insuficiente</label><br>
+
+            <input type="radio" id="eia_pergunta4_opcao4" name="eia_pergunta4" value="Muito insuficiente ou não dorme">
+            <label for="eia_pergunta4_opcao4">Muito insuficiente ou não dorme</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('eia_pergunta4')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 5 -->
+        <fieldset>
+            <legend id="EIA_pergunta5">5. Qualidade do sono (não importa se dorme pouco tempo)</legend>
+
+            <input type="radio" id="eia_pergunta5_opcao1" name="eia_pergunta5" value="Satisfatório">
+            <label for="eia_pergunta5_opcao1">Satisfatório</label><br>
+
+            <input type="radio" id="eia_pergunta5_opcao2" name="eia_pergunta5" value="Ligeiramente insatisfatório">
+            <label for="eia_pergunta5_opcao2">Ligeiramente insatisfatório</label><br>
+
+            <input type="radio" id="eia_pergunta5_opcao3" name="eia_pergunta5" value="Moderadamente insatisfatório">
+            <label for="eia_pergunta5_opcao3">Moderadamente insatisfatório</label><br>
+
+            <input type="radio" id="eia_pergunta5_opcao4" name="eia_pergunta5" value="Muito insatisfatório ou não dorme">
+            <label for="eia_pergunta5_opcao4">Muito insatisfatório ou não dorme</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('eia_pergunta5')">x</button>
+        </fieldset>
+
+        <br>
+        <button type="button" onclick="limparRespostas()">Limpar Respostas</button>
+    </form>
+
+    <div class="All_div">
+        <div id="div-EIA"></div>
+    </div>
+   
+    <script src="../JS/iframeResizer.contentWindow.min.js"></script>
+
+    <script src="../JS/pdf_maker.js"></script>
+
+    <script>
+        function div_EIA(todosValores, todosTextos) {
+
+            // Acessa o elemento do título diretamente pelo ID, já que é único e está no documento
+            const titulo_EIA = document.getElementById('titulo_EIA').outerHTML;
+
+            const divEIA = document.getElementById('div-EIA');
+            divEIA.innerHTML = `
+                <div class="Grupo_div">
+                <div class="Titulo_grupo">
+                    <div class="Titulo">${titulo_EIA}</div>
+                </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['EIApergunta1']}</div>
+                                <div class="Resposta">${todosValores['eiapergunta1']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['EIApergunta2']}</div>
+                                <div class="Resposta">${todosValores['eiapergunta2']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['EIApergunta3']}</div>
+                                <div class="Resposta">${todosValores['eiapergunta3']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['EIApergunta4']}</div>
+                                <div class="Resposta">${todosValores['eiapergunta4']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['EIApergunta5']}</div>
+                                <div class="Resposta">${todosValores['eiapergunta5']}</div>
+                        </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
