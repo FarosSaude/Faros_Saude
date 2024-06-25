@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style_quest.css">
+    <script src="../JS/JS_quest.js"></script>
+
+    <title>Índice de Gravidade de Insônia – ISI</title>
+</head>
+<body>
+    <h2 class="Titulo_user" id="titulo_ISI">Índice de Gravidade de Insônia – ISI</h2>
+    
+    <form action="#">
+
+        <fieldset>
+            <legend id="ISI_pergunta1">1. Por favor, avalie a gravidade da sua insônia nas duas últimas semanas, em relação a:</legend>
+
+            <!-- Pergunta 1 -->
+            <fieldset>
+                <legend id="ISI_pergunta1_a">a. Dificuldade em pegar no sono:</legend>
+
+                <input type="radio" id="isi_pergunta1_opcao1_a" name="isi_pergunta1_a" value="Nenhuma">
+                <label for="isi_pergunta1_opcao1_a">Nenhuma</label><br>
+    
+                <input type="radio" id="isi_pergunta1_opcao2_a" name="isi_pergunta1_a" value="Leve">
+                <label for="isi_pergunta1_opcao2_a">Leve</label><br>
+    
+                <input type="radio" id="isi_pergunta1_opcao3_a" name="isi_pergunta1_a" value="Moderada">
+                <label for="isi_pergunta1_opcao3_a">Moderada</label><br>
+    
+                <input type="radio" id="isi_pergunta1_opcao4_a" name="isi_pergunta1_a" value="Grave">
+                <label for="isi_pergunta1_opcao4_a">Grave</label><br>
+    
+                <input type="radio" id="isi_pergunta1_opcao5_a" name="isi_pergunta1_a" value="Muito grave">
+                <label for="isi_pergunta1_opcao5_a">Muito grave</label><br>
+
+    
+                <button id="clean" type="button" onclick="limparSelecoes('isi_pergunta1_a')">x</button>
+            </fieldset>
+
+            <fieldset>
+                <legend id="ISI_pergunta1_b">b. Dificuldade em manter o sono:</legend>
+
+                <input type="radio" id="isi_pergunta1_opcao1_b" name="isi_pergunta1_b" value="Nenhuma">
+                <label for="isi_pergunta1_opcao1_b">Nenhuma</label><br>
+    
+                <input type="radio" id="isi_pergunta1_opcao2_b" name="isi_pergunta1_b" value="Leve">
+                <label for="isi_pergunta1_opcao2_b">Leve</label><br>
+    
+                <input type="radio" id="isi_pergunta1_opcao3_b" name="isi_pergunta1_b" value="Moderada">
+                <label for="isi_pergunta1_opcao3_b">Moderada</label><br>
+    
+                <input type="radio" id="isi_pergunta1_opcao4_b" name="isi_pergunta1_b" value="Grave">
+                <label for="isi_pergunta1_opcao4_b">Grave</label><br>
+    
+                <input type="radio" id="isi_pergunta1_opcao5_b" name="isi_pergunta1_b" value="Muito grave">
+                <label for="isi_pergunta1_opcao5_b">Muito grave</label><br>
+
+
+                <button id="clean" type="button" onclick="limparSelecoes('isi_pergunta1_b')">x</button>
+            </fieldset>
+
+            <fieldset>
+                <legend id="ISI_pergunta1_c">c. Problema de despertar muito cedo:</legend>
+
+                <input type="radio" id="isi_pergunta1_opcao1_c" name="isi_pergunta1_c" value="Nenhuma">
+                <label for="isi_pergunta1_opcao1_c">Nenhuma</label><br>
+    
+                <input type="radio" id="isi_pergunta1_opcao2_c" name="isi_pergunta1_c" value="Leve">
+                <label for="isi_pergunta1_opcao2_c">Leve</label><br>
+    
+                <input type="radio" id="isi_pergunta1_opcao3_c" name="isi_pergunta1_c" value="Moderada">
+                <label for="isi_pergunta1_opcao3_c">Moderada</label><br>
+    
+                <input type="radio" id="isi_pergunta1_opcao4_c" name="isi_pergunta1_c" value="Grave">
+                <label for="isi_pergunta1_opcao4_c">Grave</label><br>
+    
+                <input type="radio" id="isi_pergunta1_opcao5_c" name="isi_pergunta1_c" value="Muito grave">
+                <label for="isi_pergunta1_opcao5_c">Muito grave</label><br>
+
+
+                <button id="clean" type="button" onclick="limparSelecoes('isi_pergunta1_c')">x</button>
+            </fieldset>
+
+        </fieldset>
+
+        <!-- Pergunta 2 -->
+        <fieldset>
+            <legend id="ISI_pergunta2">2. Quanto você está satisfeito ou insatisfeito com o padrão atual de seu sono?</legend>
+
+            <input type="radio" id="isi_pergunta2_opcao1" name="isi_pergunta2" value="Muito satisfeito">
+            <label for="isi_pergunta2_opcao1">Muito satisfeito</label><br>
+
+            <input type="radio" id="isi_pergunta2_opcao2" name="isi_pergunta2" value="Satisfeito">
+            <label for="isi_pergunta2_opcao2">Satisfeito</label><br>
+
+            <input type="radio" id="isi_pergunta2_opcao3" name="isi_pergunta2" value="Indiferente">
+            <label for="isi_pergunta2_opcao3">Indiferente</label><br>
+
+            <input type="radio" id="isi_pergunta2_opcao4" name="isi_pergunta2" value="Insatisfeito">
+            <label for="isi_pergunta2_opcao4">Insatisfeito</label><br>
+
+            <input type="radio" id="isi_pergunta2_opcao5" name="isi_pergunta2" value="Muito insatisfeito">
+            <label for="isi_pergunta2_opcao5">Muito insatisfeito</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('isi_pergunta2')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 3 -->
+        <fieldset>
+            <legend id="ISI_pergunta3">3. Qual é o tom emocional dos seus sonhos em média?</legend>
+
+            <input type="radio" id="isi_pergunta3_opcao1" name="isi_pergunta3" value="Não interfere">
+            <label for="isi_pergunta3_opcao1">Não interfere</label><br>
+
+            <input type="radio" id="isi_pergunta3_opcao2" name="isi_pergunta3" value="Interfere um pouco">
+            <label for="isi_pergunta3_opcao2">Interfere um pouco</label><br>
+
+            <input type="radio" id="isi_pergunta3_opcao3" name="isi_pergunta3" value="Interfere de algum modo">
+            <label for="isi_pergunta3_opcao3">Interfere de algum modo</label><br>
+
+            <input type="radio" id="isi_pergunta3_opcao4" name="isi_pergunta3" value="Interfere muito">
+            <label for="isi_pergunta3_opcao4">Interfere muito</label><br>
+
+            <input type="radio" id="isi_pergunta3_opcao5" name="isi_pergunta3" value="Interfere extremamente">
+            <label for="isi_pergunta3_opcao5">Interfere extremamente</label><br>
+            
+
+            <button id="clean" type="button" onclick="limparSelecoes('isi_pergunta3')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 4 -->
+        <fieldset>
+            <legend id="ISI_pergunta4">4. Quanto você acha que os outros percebem que o seu problema de sono atrapalha sua qualidade de vida?</legend>
+
+            <input type="radio" id="isi_pergunta4_opcao1" name="isi_pergunta4" value="Não percebem">
+            <label for="isi_pergunta4_opcao1">Não percebem</label><br>
+
+            <input type="radio" id="isi_pergunta4_opcao2" name="isi_pergunta4" value="Percebem um pouco">
+            <label for="isi_pergunta4_opcao2">Percebem um pouco</label><br>
+
+            <input type="radio" id="isi_pergunta4_opcao3" name="isi_pergunta4" value="Percebem de algum modo">
+            <label for="isi_pergunta4_opcao3">Percebem de algum modo</label><br>
+
+            <input type="radio" id="isi_pergunta4_opcao4" name="isi_pergunta4" value="Percebem muito">
+            <label for="isi_pergunta4_opcao4">Percebem muito</label><br>
+
+            <input type="radio" id="isi_pergunta4_opcao5" name="isi_pergunta4" value="Percebem extremamente">
+            <label for="isi_pergunta4_opcao5">Percebem extremamente</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('isi_pergunta4')">x</button>
+        </fieldset>
+
+        <!-- Pergunta 5 -->
+        <fieldset>
+            <legend id="ISI_pergunta5">5. O quanto você está preocupado ou estressado com o seu problema de sono?</legend>
+
+            <input type="radio" id="isi_pergunta5_opcao1" name="isi_pergunta5" value=" Não estou preocupado">
+            <label for="isi_pergunta5_opcao1"> Não estou preocupado</label><br>
+
+            <input type="radio" id="isi_pergunta5_opcao2" name="isi_pergunta5" value="Um pouco preocupado">
+            <label for="isi_pergunta5_opcao2">Um pouco preocupado</label><br>
+
+            <input type="radio" id="isi_pergunta5_opcao3" name="isi_pergunta5" value="De algum modo preocupado">
+            <label for="isi_pergunta5_opcao3">De algum modo preocupado</label><br>
+
+            <input type="radio" id="isi_pergunta5_opcao4" name="isi_pergunta5" value="Muito preocupado">
+            <label for="isi_pergunta5_opcao4">Muito preocupado</label><br>
+
+            <input type="radio" id="isi_pergunta5_opcao5" name="isi_pergunta5" value="Extremamente preocupado">
+            <label for="isi_pergunta5_opcao5">Extremamente preocupado</label><br>
+
+
+            <button id="clean" type="button" onclick="limparSelecoes('isi_pergunta5')">x</button>
+        </fieldset>
+
+        <br>
+        <button type="button" onclick="limparRespostas()">Limpar Respostas</button>
+    </form>
+
+    <div class="All_div">
+        <div id="div-ISI"></div>
+    </div>
+   
+    <script src="../JS/iframeResizer.contentWindow.min.js"></script>
+
+    <script src="../JS/pdf_maker.js"></script>
+
+    <script>
+        function div_ISI(todosValores, todosTextos) {
+
+            // Acessa o elemento do título diretamente pelo ID, já que é único e está no documento
+            const titulo_ISI = document.getElementById('titulo_ISI').outerHTML;
+
+            const divISI = document.getElementById('div-ISI');
+            divISI.innerHTML = `
+                <div class="Grupo_div">
+                    <div class="Titulo_grupo">
+                        <div class="Titulo">${titulo_ISI}</div>
+                    </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['ISIpergunta1']}</div>
+                                <div class="Pergunta_sub">${todosTextos['ISIpergunta1a']}</div>
+                                    <div class="Resposta_sub">${todosValores['isipergunta1a']}</div>
+                        </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta_sub">${todosTextos['ISIpergunta1b']}</div>
+                                    <div class="Resposta_sub">${todosValores['isipergunta1b']}</div>
+                            </div>
+
+                            <div class="grupo-pergunta-resposta">
+                                <div class="Pergunta_sub">${todosTextos['ISIpergunta1c']}</div>
+                                    <div class="Resposta_sub">${todosValores['isipergunta1c']}</div>
+                            </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['ISIpergunta2']}</div>
+                                <div class="Resposta">${todosValores['isipergunta2']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['ISIpergunta3']}</div>
+                                <div class="Resposta">${todosValores['isipergunta3']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['ISIpergunta4']}</div>
+                                <div class="Resposta">${todosValores['isipergunta4']}</div>
+                        </div>
+
+                        <div class="grupo-pergunta-resposta">
+                            <div class="Pergunta">${todosTextos['ISIpergunta5']}</div>
+                                <div class="Resposta">${todosValores['isipergunta5']}</div>
+                        </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

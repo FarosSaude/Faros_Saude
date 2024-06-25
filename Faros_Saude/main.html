@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização de Questionários</title>
+    <link rel="stylesheet" href="CSS/style_index.css">
+    <link rel="stylesheet" href="CSS/style_quest.css">
+    <script src="JS/JS_main.js"></script>
+    <script src="JS/JS_quest.js">//Utilizei esse arquivo por conta do limparLocalStorage ao voltar para index</script>
+
+    
+    <!--        
+        <script type="module">import MinhaPagina from "../JS/react_beforeunload.js";</script>
+        <script src="../JS/react_beforeunload.js"></script>
+    -->
+    <style>
+        /*width: 100vw;
+        iframe {
+            
+            border: none;
+        }
+        */
+    </style>
+</head>
+<body>
+    <div class="logo_user_container">
+        <div id="logo_user"><img src="IMG/LOGO_CAPA_FAROS.svg"></div>
+    </div>
+
+    <h1 id="titulo_principal">Visualização dos Questionários</h1>
+
+    <!-- Campo para o nome do paciente -->
+    <label id= "nPaciente" for="nomePaciente"><strong>Nome completo do Paciente:</label>
+    <input type="text" id="nomePaciente" name="nomePaciente">
+    <br><br>
+    <label id= "nProfissional" for="nomeProfissional"><strong>Nome completo do Profissional:</strong></label>
+    <input type="text" id="nomeProfissional" name="nomeProfissional">
+    <br><br>
+    <label id= "dAtual" for="dataAtual"><strong>Data:</strong></label>
+    <input type="date" id="dataAtual" name="dataAtual" onblur="limitarData(this)">
+    <br><br>
+
+    <div id="htmlContainer"></div>
+    <div id="div-MASTER"></div>
+    <div id="div-ULTRA"></div>
+    
+    <br><br>
+    <button id="collectIframe" type="button">Coletar TUDO</button>
+    <br><br>
+
+    <script src="JS/iframeResizer.min.js"></script>
+    <script src="JS/pdf_maker.js"></script>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+<script>
+    function limitarData(input) {
+    const dataMinima = new Date('2024-01-01'); // Defina a data mínima permitida
+    const dataMaxima = new Date('2060-12-31'); // Defina a data máxima permitida
+    const dataEntrada = new Date(input.value);
+
+    if (dataEntrada < dataMinima) {
+        input.value = dataMinima.toISOString().split('T')[0];
+    } else if (dataEntrada > dataMaxima) {
+        input.value = dataMaxima.toISOString().split('T')[0];
+    }
+}
+</script>
+
+<script>
+    //Formatar data
+    function formatarData(dataISO) {
+        const data = new Date(dataISO);
+        const dia = String(data.getDate()).padStart(2, '0');
+        const mes = String(data.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+        const ano = data.getFullYear();
+        return `${dia}/${mes}/${ano}`;
+        }
+
+</script>
+
+<script>
+    
+    // Alocar div_MASTER na div_ULTRA com as devidas edições
+    let idsDivs = ["div-QSC", "div-WHOQOL", "div-EST", "div-ESE", "div-ESS", "div-ESP", "div-QSM", "div-IAB", "div-ISI", "div-QMV", "div-EIA"];
+    // Implementar através de função nome e data + div_Master
+    
+    function documento(final) {
+
+        // 1º coletar nome data div-Master div-Ultra All_div
+        const nomePacienteElement = document.getElementById('nomePaciente');
+        const nomeProfissionalElement = document.getElementById('nomeProfissional');
+        const dataAtualElement = document.getElementById('dataAtual');
+        const div_MASTERElement = document.getElementById('div-MASTER');
+        const preposicoes = ['do', 'da', 'de', 'dos', 'das', 'de la', 'del', 'de los', 'della', 'de\'', 'du', 'des', 'of'];
+
+        let nomePaciente = nomePacienteElement ? nomePacienteElement.value : '';
+        let nomeProfissional = nomeProfissionalElement ? nomeProfissionalElement.value : '';
+        let dataAtual = dataAtualElement ? dataAtualElement.value : '';
+        let dataFormatada = formatarData(dataAtual);
+        let div_MASTER = div_MASTERElement ? div_MASTERElement.innerHTML : '';
+        var divULTRA = document.getElementById('div-ULTRA');
+        
+            // Altera a classe de 'Titulo_user' para 'Titulo'
+            var elementosTituloUser = divULTRA.querySelectorAll('.Titulo_user');
+
+            // Aplica os estilos desejados diretamente a esses elementos
+            elementosTituloUser.forEach(function(elemento) {
+                elemento.classList.remove('Titulo_user');
+                elemento.classList.add('Titulo');
+            });
+
+            // Concatenar o nome dos títulos em uma só variável
+            function getTituloContents() {
+                const tituloDivs = div_MASTERElement.querySelectorAll('.Titulo');
+                const tituloContents = Array.prototype.map.call(tituloDivs, (div) => div.textContent).join(', ');
+                return tituloContents;
+            }
+
+            const tituloContents = getTituloContents();
+
+        // Vai sair depois
+        // Adicionando console.log para visualizar a div_MASTER
+        console.log('Conteúdo da div_MASTER:', div_MASTER);
+            
+        // Alocar tudo na div_ULTRA
+        const docFinal = document.getElementById('div-ULTRA');
+        docFinal.innerHTML = `
+            <div class="Capa_pdf">
+                <div id="data_pdf"><strong>Data:</strong> ${dataFormatada}</div>
+                <div class="logo_pdf_container">
+                    <div id="logo_pdf"><img src="IMG/LOGO_CAPA_FAROS.svg"></div>
+                </div>
+                <div class="Nome_pdf_container">
+                    <div class="Nome_pdf"><strong>Nome do Paciente:</strong> ${nomePaciente}</div>
+                    <div class="Nome_pdf"><strong>Nome do Profissional:</strong> ${nomeProfissional}</div>
+                </div>
+                <div class='Questionarios'><strong>Questionários utilizados:</strong> ${tituloContents}.</div>
+            </div>
+            <div class="Nova_pagina">
+                <div>${div_MASTER}</div>
+            </div>
+        `;
+
+
+        console.log('Conteúdo da div_ULTRA:', divULTRA);
+
+            function nomeArquivo(){
+
+                // Separa o nome do paciente em partes
+                const partesNome = nomePaciente.split(' ');
+
+                // Determina o primeiro nome e sobrenome de acordo com as regras
+                let primeiroNome = partesNome[0];
+                let sobrenome = partesNome[1] && preposicoes.includes(partesNome[1].toLowerCase()) ? partesNome[2] : partesNome[1];
+
+                // Monta o nome do arquivo
+                let nomeArquivo = `${primeiroNome} ${sobrenome}_${dataFormatada}_Faros Saude`;
+
+                return nomeArquivo;
+                }
+
+        // Exemplo de uso da função
+        const nomeDoArquivo = nomeArquivo();
+
+        // Temporariamente deixar invisível
+        docFinal.style.display = 'block';
+
+        // Use html2pdf para gerar o PDF a partir do contêiner
+        html2pdf().from(docFinal).set({
+            margin: 1,
+            filename: `${nomeDoArquivo}.pdf`,
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+            /*pagebreak: { mode: 'css', before: '.beforeClass', after: '.afterClass', avoid: 'tr' }*/
+            pagebreak: { mode: 'css', before: '.Nova_pagina' }
+        }).save().then(() => {
+            divULTRA.innerHTML = '';
+            div_MASTERElement.innerHTML = '';
+            ocultarDiv(idsDivs);
+        });
+
+    }
+
+</script>
+</html>

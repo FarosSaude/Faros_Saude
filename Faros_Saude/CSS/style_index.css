@@ -1,0 +1,22 @@
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.Titulo_index {
+	margin-left: 1.5%;
+}
+
+#htmlForm {
+	margin-left: 1.5%;
+}
+
+ iframe {
+	max-width: 100%;
+	width: 100vw;
+	border: none;
+}
+
+.hidden {
+	display: none;
+}

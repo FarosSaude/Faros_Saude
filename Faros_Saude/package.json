@@ -1,0 +1,10 @@
+{
+  "name": "Faros_Saude",
+  "version": "1.22.22",
+  "description": "Sistema de questionarios feito para uso de profissionais da area da saude e destinado a pacientes psiquiatricos",
+  "main": "react.js",
+  "license": "MIT",
+  "dependencies": {
+    "react-dom": "^18.3.1"
+  }
+}
